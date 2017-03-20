@@ -34,7 +34,7 @@ The columns defined in the **Box new CSV file** trigger shows up as a list of us
 
 Notice the row icon in the datatree. This identifies lists in the datatree.
 
-![List datatree icon](/_uploads/_features/list-management/list-datatree-icon.png)
+![List datatree icon](/assets/images/features/list-management/list-datatree-icon.png)
 
 *List icon within datatree*
 
@@ -49,7 +49,7 @@ These datapills can be used to map into Workato actions' input fields. There are
 When using pills directly from a list, only the values of the first list item will be retrieved. In the following recipe, pills from the list are used directly in the **Log message** action.
 
 *Recipe using list pills directly in Log message action*
- ![Example recipe using list pills directly](/_uploads/_features/list-management/example-recipe-using-list-pills-directly.png) [Example recipe](https://www.workato.com/recipes/487919)
+ ![Example recipe using list pills directly](/assets/images/features/list-management/example-recipe-using-list-pills-directly.png) [Example recipe](https://www.workato.com/recipes/487919)
 
 [![https://gyazo.com/8b35298c73eddf54d629e8c323a05673](https://i.gyazo.com/8b35298c73eddf54d629e8c323a05673.gif)](https://gyazo.com/8b35298c73eddf54d629e8c323a05673)
 
@@ -57,13 +57,13 @@ When using pills directly from a list, only the values of the first list item wi
 
 In the job details page, the trigger output displays all three lines within the CSV file.
 
-![CSV trigger output](/_uploads/_features/list-management/csv-trigger-output.png)
+![CSV trigger output](/assets/images/features/list-management/csv-trigger-output.png)
 
 *Trigger output details displaying lines within the CSV file*
 
 As the **Log message** action uses only datapills directly from the list, without handling the list in any way, only the first line's data is retrieved.
 
-![Log message result](/_uploads/_features/list-management/log-message-result.png)
+![Log message result](/assets/images/features/list-management/log-message-result.png)
 
 *Log message input displaying only the first line of data*
 
@@ -72,13 +72,13 @@ Some actions will accept a list as input e.g. Salesforce bulk insert and bulk up
 
 The following is an example scenario that imports new products from a Box CSV file into Salesforce via the **Bulk insert** action.
 
-![Example recipe using list input](/_uploads/_features/list-management/example-recipe-using-input-list.png)
+![Example recipe using list input](/assets/images/features/list-management/example-recipe-using-input-list.png)
 
 *Example recipe using list input* [Example recipe](https://www.workato.com/recipes/488454)
 
 Actions that take lists as inputs will have a input field called **Source list**, which will only take in list pills. When these list input fields are selected, the datatree changes to offer only list pills. The Rows list object pill is mapped into the Salesforce product source list input field.
 
-![Example input source list](/_uploads/_features/list-management/example-input-source-list.png)
+![Example input source list](/assets/images/features/list-management/example-input-source-list.png)
 
 *Rows list object is mapped into the Salesforce products input source list*
 
@@ -90,13 +90,13 @@ For the list object passed into the input source list, the list will be transfer
 
 The following shows the CSV file content.
 
-![CSV trigger output](/_uploads/_features/list-management/csv-trigger-output.png)
+![CSV trigger output](/assets/images/features/list-management/csv-trigger-output.png)
 
 *Trigger output details displaying lines within the CSV file*
 
 The action output in the job history shows that three products have been created accordingly in Salesforce.
 
-![Salesforce bulk insert via input list](/_uploads/_features/list-management/job-output-sf-bulk-insert.png)
+![Salesforce bulk insert via input list](/assets/images/features/list-management/job-output-sf-bulk-insert.png)
 
 *Salesforce bulk insert via list input*
 
@@ -105,11 +105,11 @@ In this example scenario, let's import a list of new inventory items (recorded w
 
 In order to move through the list and create three NetSuite inventory items, the Repeat step should be used to iterate through the list, and carry out the same action for each iteration.
 
-![Example recipe using repeat step](/_uploads/_features/list-management/example-recipe-using-repeat-step.png) [Example recipe](https://www.workato.com/recipes/487921)
+![Example recipe using repeat step](/assets/images/features/list-management/example-recipe-using-repeat-step.png) [Example recipe](https://www.workato.com/recipes/487921)
 
 To iterate through the Rows list, pass the Rows list object as input for the repeat step. The recipe will therefore iterate through the list thrice to repeat the "Add inventory item" action thrice, with different values from different CSV lines each time.
 
-![Repeat step input list](/_uploads/_features/list-management/repeat-step-input-list.png)
+![Repeat step input list](/assets/images/features/list-management/repeat-step-input-list.png)
 
 *Provide the list object as input for repeat step*
 
@@ -151,29 +151,29 @@ The list connector is a Workato utility built for users to create custom lists a
 A custom list has to be created before data can be accumulated and stored within it. To create the list, select the **List** connector and its default action **
 Append item to list**.
 
-![Empty accumulator](/_uploads/_features/list-management/empty-accumulator.png)
+![Empty accumulator](/assets/images/features/list-management/empty-accumulator.png)
 
 *Accumulator with no fields configured*
 
 Define the fields in the custom list by configuring field name, type and hint.
 
-![Adding string field to accumulator](/_uploads/_features/list-management/add-string-to-accumulator.png)
+![Adding string field to accumulator](/assets/images/features/list-management/add-string-to-accumulator.png)
 
 *Adding a string field to the accumulator list*
 
-![Adding date field to accumulator](/_uploads/_features/list-management/add-date-to-accumulator.png)
+![Adding date field to accumulator](/assets/images/features/list-management/add-date-to-accumulator.png)
 
 *Adding a date field to the accumulator list*
 
 After configuring the fields in the custom list, ensure that the list is within a Repeat step and that the datapills are mapped from the Repeat step's output datatree. This ensures that the iterated list items' values are mapped into the custom list accordingly, and that values are not being duplicated within the list because the wrong pills from the main datatree (as opposed to the Repeat step's datatree) were mapped as shown [above](#common-mistake-when-using-repeat-step).
 
-![Accumulator example](/_uploads/_features/list-management/accumulator-example.png)
+![Accumulator example](/assets/images/features/list-management/accumulator-example.png)
 
 *Configured and mapped accumulator*
 
 Fields can be added or edited within custom lists anytime.
 
-![Accumulator example](/_uploads/_features/list-management/accumulator-example.png)
+![Accumulator example](/assets/images/features/list-management/accumulator-example.png)
 
 *Fields can be added or edited in custom lists*
 
@@ -193,7 +193,7 @@ There are two ways of building this recipe:
 
 Iterate through the Salesforce list of opportunity products via a Repeat step to find corresponding NetSuite inventory items, and accumulate that in a custom list. Subsequently, create a complete NetSuite sales order with a list of line items in a single action, by passing in the custom list built with accumulator.
 
-![Example recipe using accumulator](/_uploads/_features/list-management/example-recipe-using-accumulator.png)
+![Example recipe using accumulator](/assets/images/features/list-management/example-recipe-using-accumulator.png)
 
 *Salesforce-Netsuite recipe using Repeat step* [Example recipe](https://www.workato.com/recipes/488286)
 
@@ -201,6 +201,6 @@ Iterate through the Salesforce list of opportunity products via a Repeat step to
 
 First, create a NetSuite sales order. Then, in a Repeat step, search for Netsuite inventory item by Salesforce opportunity product name (or any other identifying field). Pass the internal ID of the NetSuite inventory item found into the **Update sales order** action in order to append a new line to the sales order.
 
-![Example recipe using repeat step](/_uploads/_features/list-management/example-recipe-using-repeat-step-vs-accumulator.png)
+![Example recipe using repeat step](/assets/images/features/list-management/example-recipe-using-repeat-step-vs-accumulator.png)
 
 *Salesforce-Netsuite recipe using Repeat step* [Example recipe](https://www.workato.com/recipes/488358)

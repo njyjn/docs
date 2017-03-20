@@ -1,4 +1,4 @@
-[![Workato](/_uploads/workato_developer_program.png)](https://www.workato.com)
+[![Workato](/assets/images/workato_developer_program.png)](https://www.workato.com)
 
 # Introduction
 
@@ -300,7 +300,7 @@ An action can make one or more requests to various endpoints. Because the framew
 
 The most important thing is to identify which endpoint will address the purpose of the action. Here we will take a look at Close.io's Lead object and how to retrieve it via the API.
 
-![close.io get lead object image](/_uploads/closeio-doc.png)
+![close.io get lead object image](/assets/images/closeio-doc.png)
 
 ```ruby
 actions: {

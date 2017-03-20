@@ -13,7 +13,7 @@ When the recipe is stopped, polling triggers stop fetching events from the trigg
 ### Polling trigger example
 A Workato account on the Business plan has a 5-minute polling interval, as displayed on their polling triggers.
 
-![Polling intervals](/_uploads/_recipes/triggers/polling_intervals.png)
+![Polling intervals](/assets/images/recipes/triggers/polling_intervals.png)
 
 *Trigger hint regarding the specific polling interval*
 
@@ -32,7 +32,7 @@ For further details about batch triggers, refer to the Batch processing article 
 ## Scheduled triggers
 Scheduled triggers are executed at defined days and times, either hourly, daily, or monthly.
 
-![Salesforce scheduled trigger schedules](/_uploads/_recipes/triggers/scheduled_trigger_schedules.png)
+![Salesforce scheduled trigger schedules](/assets/images/recipes/triggers/scheduled_trigger_schedules.png)
 
 *Various schedule options for Salesforce scheduled search trigger*
 
@@ -48,7 +48,7 @@ However, not all triggers have the **Since/From** parameter. For such triggers, 
 
 This offset is usually communicated in the trigger hint.
 
-![Google Calendar since parameter](/_uploads/_recipes/triggers/google_calendar_since_param.png)
+![Google Calendar since parameter](/assets/images/recipes/triggers/google_calendar_since_param.png)
 
 *Trigger hint regarding the default offset of 1 hour ago for Google Calendar*
 
@@ -61,7 +61,7 @@ In the following case, we're setting the **From** date as 1 Jan 2017, midnight P
 
 When the recipe is started, only Salesforce accounts created after 1 Jan 2017, midnight PST will be picked up, as viewed from the created date column on the job report.
 
-![Since parameter](/_uploads/_recipes/triggers/since_param_ran_recipe.png)
+![Since parameter](/assets/images/recipes/triggers/since_param_ran_recipe.png)
 
 *Custom job report showing that Salesforce accounts picked up were created after Jan 1, 2017*
 

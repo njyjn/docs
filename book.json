@@ -14,13 +14,9 @@
       },
 
       "favicon": {
-        "shortcut": "favicon/favicon.ico",
-        "bookmark": "favicon/favicon.ico",
-        "appleTouch": "favicon/android-chrome-36x36.png"
+        "shortcut": "assets/images/favicon/favicon.ico",
+        "bookmark": "assets/images/favicon/favicon.ico",
+        "appleTouch": "assets/images/favicon/android-chrome-36x36.png"
       }
-    },
-
-    "styles": {
-      "workato": "styles/workato.css"
     }
 }

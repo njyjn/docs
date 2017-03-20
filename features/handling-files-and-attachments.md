@@ -23,7 +23,7 @@ There is no difference between moving text files and moving binary files between
 ### Example of parsing text file data to be used in Workato recipes
 The following recipe parses new CSV files in Box and uses the data parsed to create new NetSuite inventory items.
 
-![Example recipe - CSV file parsing](/_uploads/_features/files-and-attachments/csv-file-parsing-recipe.png)
+![Example recipe - CSV file parsing](/assets/images/features/files-and-attachments/csv-file-parsing-recipe.png)
 
 *Recipe that parses CSV files to retrieve data for use in datatree* [Example recipe](https://www.workato.com/recipes/485023)
 
@@ -70,7 +70,7 @@ This is typically a 2-step process:
 ### Example of moving text/binary files via public URL
 Let's take the scenario where we move new files in Dropbox into Box. This is how the recipe looks.
 
-![Example recipe - moving files via URL](/_uploads/_features/files-and-attachments/file-url-recipe.png)
+![Example recipe - moving files via URL](/assets/images/features/files-and-attachments/file-url-recipe.png)
 
 *Recipe that moves files from Dropbox to Box via public URLs* [Example recipe](https://www.workato.com/recipes/485735)
 
@@ -89,7 +89,7 @@ This is typically a 2-step process:
 ### Example of moving text/binary files via file content
 Let's take the scenario where Gmail email attachments need to be moved to Box. This is how the recipe looks.
 
-![Example recipe - moving files between apps](/_uploads/_features/files-and-attachments/moving-files-betwen-apps-recipe.png)
+![Example recipe - moving files between apps](/assets/images/features/files-and-attachments/moving-files-betwen-apps-recipe.png)
 
 *Recipe that moves Gmail attachments to Box* [Example recipe](https://www.workato.com/recipes/485773)
 
@@ -113,7 +113,7 @@ The **Utilities** connector has a **Download file from URL** action that retriev
 ## Example of using Utilities to download file from public URL
 Let's take the scenario where new files created in a shared Box folder needs to be uploaded and associated with a Salesforce account. This is how the recipe looks.
 
-![Example recipe - using utilities to download file](/_uploads/_features/files-and-attachments/utilities-download-file.png)
+![Example recipe - using utilities to download file](/assets/images/features/files-and-attachments/utilities-download-file.png)
 
 *Recipe that uses Utilities to download file content* [Example recipe](https://www.workato.com/recipes/485775)
 
@@ -130,11 +130,11 @@ Workato supports the ability to encode or decode base64 content via formulas.
 
 To base64 encode binary content and upload it into such apps:
 
-![Encode file content](/_uploads/_features/files-and-attachments/encode-file.png)
+![Encode file content](/assets/images/features/files-and-attachments/encode-file.png)
 
 *Formula for encoding file content*
 
 To decode binary content from base64 content from such apps:
 
-![Decode file content](/_uploads/_features/files-and-attachments/decode-file.png)
+![Decode file content](/assets/images/features/files-and-attachments/decode-file.png)
 *Formula for decoding file content*

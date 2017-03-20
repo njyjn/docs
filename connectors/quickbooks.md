@@ -18,13 +18,13 @@ Workato currently does not support QuickBooks Desktop/Enterprise versions.
 ## How to connect to QuickBooks on Workato
 
 ### QuickBooks connection 
-![QBO connect1](/_uploads/QBO connect1.JPG)
+![QBO connect1](/assets/images/QBO connect1.JPG)
 
 * **Connection name**
 
   Give this QuickBooks Connection a unique name which identifies the QuickBooks account you are connected to and click 'Connect'. A pop-up will appear.
   
-  ![QBO connect2](/_uploads/QBO connect2.JPG)
+  ![QBO connect2](/assets/images/QBO connect2.JPG)
   
 * **Username & Password**
 
@@ -75,7 +75,7 @@ Creating a single invoice with only line items are great for Single sync ups, wh
 
 In all other cases, you should use 'Create with line items' and simply place the list of items where required. 
 
-![QBO mulltiline](/_uploads/QBO_docs/QBO mulltiline.png)
+![QBO mulltiline](/assets/images/QBO_docs/QBO mulltiline.png)
 
 A 'list' type pill is marked with the list logo as can be seen above in red.
 
@@ -161,7 +161,7 @@ Workato adapts your business needs and supports all necessary changes needed to 
 
 QuickBooks Online allows you to support multiple currencies. To do so, you may enable it in your Accounts and Settings section. Do note that enabling multiple currency may incur setting changes. Please do seek consultation with QuickBooks Online support.
 
-![QBO currency](/_uploads/QBO_docs/QBO currency.png)
+![QBO currency](/assets/images/QBO_docs/QBO currency.png)
 
 Exchange Rate field allows you to specify the exchange rate to your home currency from the specified currency. If no Currency is specified, the exchange rate will be defaulted to 1 in respect of the home currency.
 
@@ -169,7 +169,7 @@ For dependent transaction documents such as Credit memo, the applied currency wi
 
 An Example:
 
-![QBO currency2](/_uploads/QBO_docs/QBO currency2.png)
+![QBO currency2](/assets/images/QBO_docs/QBO currency2.png)
 
 This field means that it will take 1.5239475 to exchange for 1 unit of the specified currency of the transaction document
 
@@ -195,15 +195,15 @@ In Quickbooks, the display name is used as a unique identifier across Customer (
 
 As such, trying to add another record with the same display name which already exist in any of the three types will give you an error: Another tenant, vendor or employee is already using this name. Please use a different name.
 
-![QBO error1](/_uploads/QBO_docs/QBO error1.png)
+![QBO error1](/assets/images/QBO_docs/QBO error1.png)
 
 On Workato, you will receive a Duplicate Name Exists Error.
 
-![QBO error2](/_uploads/QBO_docs/QBO error2.png)
+![QBO error2](/assets/images/QBO_docs/QBO error2.png)
 
 One solution to this is to add a Prefix or Suffix before or after the Display name of the Customer, Employee or Vendor.
 
-![QBO error3](/_uploads/QBO_docs/QBO error3.png)
+![QBO error3](/assets/images/QBO_docs/QBO error3.png)
 
 Do note however that QuickBooks does not allow for certain special characters in the Display Name including colon (:).
 
@@ -244,24 +244,30 @@ You get this error when you are trying to create a record in QuickBooks Online a
 
 ### App Already Purchased
 
-![QBO purchased](/_uploads/QBO_docs/QBO purchased.png)
+![QBO purchased](/assets/images/QBO_docs/QBO purchased.png)
+
 If you receive the following error, there is someone else in your company who is already connected to Workato. Contact your colleague to delete their Workato connection to resolve this error.
 
 ### Object Not found. Error while accessing QuickBooks API
 
-![QBO errorobjnotfound1](/_uploads/QBO_docs/QBO errorobjnotfound1.png)
+![QBO errorobjnotfound1](/assets/images/QBO_docs/QBO errorobjnotfound1.png)
+
 What does this mean : This usually happens when you tried to get an object based on an ID in QuickBooks and that object does not exist. For example,
-![QBO errorobjnotfound3](/_uploads/QBO_docs/QBO errorobjnotfound3.png)
+
+![QBO errorobjnotfound3](/assets/images/QBO_docs/QBO errorobjnotfound3.png)
+
 The recipe tries to get the item from QuickBooks based on the ID, unfortunately that object does not exist in your Quickbooks account. You would want to check again in your QuickBooks.
 
 You can find the ID of your object in the URL. It would usually shown up with an ID=6 where 6 is the ID of your object. 
-![QBO errorobjnotfound2](/_uploads/QBO_docs/QBO errorobjnotfound2.png)
+
+![QBO errorobjnotfound2](/assets/images/QBO_docs/QBO errorobjnotfound2.png)
 
 You can always re-run the job again once it has been ensured, or you may have to change your recipe to make sure that the workflow is correct. 
 
 ### 784 QuickBooks API not responding
 
-![QBO APIerror](/_uploads/QBO_docs/QBO APIerror.png)
+![QBO APIerror](/assets/images/QBO_docs/QBO APIerror.png)
+
 This usually happens when there is an API outage on QuickBooks side, or it has some intermittent issues
 Keep watch of http://status.developer.intuit.com, and try re-running the same job after a while
 
@@ -270,7 +276,7 @@ Keep watch of http://status.developer.intuit.com, and try re-running the same jo
 This error could mean that there were some connectivity issues with the app connection.
 Disconnect your app by going to the connections tab at the bottom of your recipe page, and reconnect it again.
 
-![QBO connect3](/_uploads/QBO_docs/QBO connect3.png)
+![QBO connect3](/assets/images/QBO_docs/QBO connect3.png)
 
 
 

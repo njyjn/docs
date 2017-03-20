@@ -41,7 +41,7 @@ After the retention period, reruns for these jobs will be disabled.
 ## Customized job report
 Job reports can be customized to show jobs summary data that shows up on the jobs history.
 
-![Custom job report](/_uploads/data-retention/custom_job_report.png)
+![Custom job report](/assets/images/data-retention/custom_job_report.png)
 
 *Custom job report showing the relevant data user defined*
 

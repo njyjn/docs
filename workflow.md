@@ -13,7 +13,7 @@ People Task feature is enabled only for certain plans. Check the [Pricing and Pl
 
 For Workato accounts with People Task feature enabled, team owners are able to view the People Task option on their account menu.
 
-![Peopletask option](/_uploads/peopletask/peopletask_option.png)
+![Peopletask option](/assets/images/peopletask/peopletask_option.png)
 
 *Peopletask menu option*
 
@@ -23,13 +23,13 @@ If accessing People Task for the first time, the People Task account needs to be
 
 The following portrays the configuration for Road Runner Inc. in the **People Task** setup screen. This configuration can be changed after the initial setup.
 
-![Peopletask configuration](/_uploads/peopletask/peopletask_config.png)
+![Peopletask configuration](/assets/images/peopletask/peopletask_config.png)
 
 *Configure and customize Peopletask site*
 
 Correspondingly, the People Task login page will show up as configured in the setup screen.
 
-![Peopletask login screen](/_uploads/peopletask/peopletask_login.png)
+![Peopletask login screen](/assets/images/peopletask/peopletask_login.png)
 
 *Customized Peopletask login page for Peopletask requesters and approvers*
 
@@ -45,7 +45,7 @@ Task requesters and approvers should be added as People Task particpants. Provid
 ## Recipe
 The following recipe triggers on new hires in BambooHR and sends a People Task approval task from John in HR to Jill the payroll manager. An email notification should be sent to Jill to inform her about the new task pending her approval.
 
-![Peopletask recipe](/_uploads/peopletask/peopletask_bamboo_recipe.png)
+![Peopletask recipe](/assets/images/peopletask/peopletask_bamboo_recipe.png)
 
 *Recipe that uses Peopletask to approve and add sensitive data about new hires*
 
@@ -60,8 +60,8 @@ In the People Task step, there are several fields to take note of.
 
 The following are stills of the same fields:
 
-![Peopletask fields 1](/_uploads/peopletask/peopletask_fields1.png)
-![Peopletask fields 2](/_uploads/peopletask/peopletask_fields2.png)
+![Peopletask fields 1](/assets/images/peopletask/peopletask_fields1.png)
+![Peopletask fields 2](/assets/images/peopletask/peopletask_fields2.png)
 
 *Peopletask action fields configuration*
 
@@ -105,8 +105,8 @@ Optionally used when the requester wishes the approver to provide additional dat
 ## People Task step preview
 From the approver's view, these fields will show up in the task as follows.
 
-![Pending Peopletask example 1](/_uploads/peopletask/pending_peopletask_example1.png)
-![Pending Peopletask example 2](/_uploads/peopletask/pending_peopletask_example2.png)
+![Pending Peopletask example 1](/assets/images/peopletask/pending_peopletask_example1.png)
+![Pending Peopletask example 2](/assets/images/peopletask/pending_peopletask_example2.png)
 
 *Preview of how Peopletask requests shows up for approvers*
 
@@ -115,13 +115,13 @@ From the approver's view, these fields will show up in the task as follows.
 ### Approver view
 The approver has to login to the People Task portal to view the tasks pending their approval.
 
-![Peopletask login screen](/_uploads/peopletask/peopletask_login.png)
+![Peopletask login screen](/assets/images/peopletask/peopletask_login.png)
 
 *Customized Peopletask login page for Peopletask requesters and approvers*
 
 Once logged in, the approver has access to the list of pending and completed tasks.
 
-![Approver view](/_uploads/peopletask/approver_view.png)
+![Approver view](/assets/images/peopletask/approver_view.png)
 
 *List of requests that approver has to review and approve/disapprove*
 
@@ -136,6 +136,6 @@ Subsequently, approve or reject the task. The recipe will resume the job to carr
 
 Once a task has been approved or rejected, it can be found within the **Completed** tab.
 
-![Approved Peopletask](/_uploads/peopletask/approved_peopletask.png)
+![Approved Peopletask](/assets/images/peopletask/approved_peopletask.png)
 
 *Approved request moves to Completed tab*

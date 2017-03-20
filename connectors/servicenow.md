@@ -17,7 +17,7 @@ The ServiceNow connector works with ServiceNow and ServiceNow instances.
 
 ### ServiceNow connection
 The ServiceNow connector uses basic authentication to authenticate with ServiceNow.
-![Configured ServiceNow connection](/_uploads/configured_ServiceNow_connection.png)
+![Configured ServiceNow connection](/assets/images/configured_ServiceNow_connection.png)
 * **Connection name**
 
   Give this ServiceNow connection a unique name that identifies which ServiceNow instance it is connected to.

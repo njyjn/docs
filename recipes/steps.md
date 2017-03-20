@@ -6,7 +6,7 @@ date: 2017-02-20 13:00:00 Z
 # Steps
 There are various types of recipe steps that can be added to recipes, each with different logic.
 
-![Available steps](/_uploads/_recipes/steps/available_steps.png)
+![Available steps](/assets/images/recipes/steps/available_steps.png)
 
 *Various recipe steps available in recipe editor*
 
@@ -41,7 +41,7 @@ The following recipe has two conditional steps:
 - If Zendesk organization was found, update Zendesk organization
 - If Zendesk organization was not found, create new Zendesk organization
 
-![Conditional step examples](/_uploads/_recipes/steps/conditional_step_examples.png)
+![Conditional step examples](/assets/images/recipes/steps/conditional_step_examples.png)
 
 *Recipe that uses conditional steps to decide whether to create or update Zendesk organization* [Example recipe](https://www.workato.com/recipes/480358)
 
@@ -55,7 +55,7 @@ First, select the list to iterate through. In order to use the values from each 
 ### Repeat step example
 Refer to the example scenario of syncing Salesforce accounts (using the batch trigger) to Zendesk as organizations.
 
-![Foreach step example scenario](/_uploads/_recipes/steps/foreach_example_scenario.png)
+![Foreach step example scenario](/assets/images/recipes/steps/foreach_example_scenario.png)
 
 *Recipe that uses the Repeat step to iterate through list of Salesforce accounts* [Example recipe](https://www.workato.com/recipes/480695)
 
@@ -75,7 +75,7 @@ Datapills from the **Foreach** output datatree should be mapped to ensure that v
 
 The following displays the mapping from the **Foreach** datatree.
 
-![Foreach step example](/_uploads/_recipes/steps/foreach_example.png)
+![Foreach step example](/assets/images/recipes/steps/foreach_example.png)
 
 *Datapills are mapped from the Repeat step's datatree* [Example recipe](https://www.workato.com/recipes/480695)
 
@@ -91,19 +91,19 @@ The stop step ends a single job from being processed any further. It is usually 
 
 The stop step can be configured to mark the job as a failed job or a successful job, depending on business logic. If marking the job as failed, an explantory error message is required.
 
-![Stop options](/_uploads/_recipes/steps/stop_options.png)
+![Stop options](/assets/images/recipes/steps/stop_options.png)
 
 *Configure the Stop step to mark the job as successful or failed* [Example recipe](https://www.workato.com/recipes/480360)
 
 ### Stop step example
 The following recipe expects all Salesforce accounts to be present in Zendesk as organizations. In cases whereby no matching Zendesk organization is found, no recipe error is thrown as the search simply returns an empty list. In this case, the recipe will send an email to the recipe owner before ending the job.
 
-![Stop step example](/_uploads/_recipes/steps/stop_step_example.png)
+![Stop step example](/assets/images/recipes/steps/stop_step_example.png)
 
 *Recipe that utilizes the Stop step to send email and end job* [Example recipe](https://www.workato.com/recipes/480360)
 
 The recipe also marks the job as an error, so that the recipe owner will take notice of this job and attempt to rerun it.
-![Stop step with error](/_uploads/_recipes/steps/stop_with_error.png)
+![Stop step with error](/assets/images/recipes/steps/stop_with_error.png)
 
 *Configuring the Step step's error message* [Example recipe](https://www.workato.com/recipes/480360)
 
@@ -116,7 +116,7 @@ There are 2 blocks: the **Monitor actions for error** and the **On error** block
 
 ## Error handler step example
 The following recipe tries to update the Zendesk organization right after the search step, irrespective of whether any Zendesk organizations were found. In cases whereby no Zendesk organization matching the Salesforce account name was found, the **Update organization** step fails.
-![Error monitor step example](/_uploads/_recipes/steps/error_monitor_example.png)
+![Error monitor step example](/assets/images/recipes/steps/error_monitor_example.png)
 
 *Recipe that uses the error monitor to monitor failures in updating Zendesk organizations* [Example recipe](https://www.workato.com/recipes/480361)
 

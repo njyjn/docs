@@ -7,15 +7,15 @@ Infinite loops occur most commonly when the recipe is performing a **bi-directio
 
 The example below shows how an infinite loop may occur: 
 
-![infinite1](/_uploads/infinite-loops/infinite1.JPG)
+![infinite1](/assets/images/infinite-loops/infinite1.JPG)
 
 The trigger picks up any New or Updated Contact in Salesforce. 
 
-![infinite2](/_uploads/infinite-loops/infinite2.JPG)
+![infinite2](/assets/images/infinite-loops/infinite2.JPG)
 
 In the final step, the recipe is configured to update the same object with information from QuickBooks.
 
-![infinite3](/_uploads/infinite-loops/infinite3.JPG)
+![infinite3](/assets/images/infinite-loops/infinite3.JPG)
 
 Because of this update step, the recipe is triggered again since the trigger uses two date/time fields (i.e. Created Date and Last Modified ) in the object records to determine if the record was newly created or updated.
 
@@ -36,7 +36,7 @@ Recipes may be in an infinite loop if:
 ### Trigger Filters
 In order to stop the re-triggering of recipes, implement filters in the trigger. An example of how this can be done is as follows:
 
-![infinite3](/_uploads/infinite-loops/infinite3.JPG)
+![infinite3](/assets/images/infinite-loops/infinite3.JPG)
 
 From the image above, we can see that the action is updating the 'Opportunity' object in Salesforce with the QuickBooks Invoice ID and URL. This update is made to the field: `Contact Description`. 
 

@@ -25,7 +25,7 @@ Polling intervals are determined by the tier of Workato plan you are subscribed 
 ## I want my jobs to trigger the recipe instantly
 For jobs to be picked up immediately, Webhooks have to be used instead. Some applications on Workato support Webhooks and you will see a `REAL TIME` indication in the trigger. 
 
-![real time](/_uploads/polling-cycle/real time.JPG)
+![real time](/assets/images/polling-cycle/real time.JPG)
 
 Webhooks have to be configured and set-up before use.
 It is also possible to build a webhooks connection with the HTTP application.

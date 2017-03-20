@@ -17,7 +17,7 @@ If you are looking for recipe support, this is the information we need:
 - Screenshots that show the problem/job report are recommended as they allow our team to visualize the issue better.
 - You may also be required to grant our support team administrator access to your account if we require some in depth analysis. You may do this through the ticket submission portal.
 
-![allow_access](/_uploads/contact-us/workato_allow_access.png)
+![allow_access](/assets/images/contact-us/workato_allow_access.png)
 
 # App or enhancement request (forums)
 
@@ -27,7 +27,7 @@ To request for the Workato platform to support new cloud applications or enhance
 - [Core Product Features](https://support.workato.com/discussions/forums/1000228698)
 - [Other Ideas](https://support.workato.com/discussions/forums/1000228699)
 
-![forum](/_uploads/contact-us/workato_forum.png)
+![forum](/assets/images/contact-us/workato_forum.png)
 
 
 # Update our documentation 

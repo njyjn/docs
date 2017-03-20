@@ -18,7 +18,7 @@ The Box connector works with all Box Plans - Individual, Business, Platform.
 ### Box connection
 The Box connector uses OAuth2 authentication to authenticate with Box. 
 
-![Box Connection 1](/_uploads/box-docs/box_connection_1.png)
+![Box Connection 1](/assets/images/box-docs/box_connection_1.png)
 
 * **Connection name**
 
@@ -26,7 +26,7 @@ The Box connector uses OAuth2 authentication to authenticate with Box.
 
 Click on connect and a Box dialog box will pop-up, requesting your Box Account credentials, and granting access to Workato.
 
-![Box Connection 2](/_uploads/box-docs/box_connection_2.png)
+![Box Connection 2](/assets/images/box-docs/box_connection_2.png)
 
 * **Email**
 
@@ -53,23 +53,23 @@ Box users who can login to Box can connect to Box from Workato. The user will ha
 
 ### Upload file content
 Plain text file content can be uploaded using this action. Enter the text for your file in the File Content field. You will also need to select the folder you want to upload to in Box and enter a name for your file (including the extension you want to give it).
-![Box Attachment 1](/_uploads/box-docs/box_attachment_1.png)
+![Box Attachment 1](/assets/images/box-docs/box_attachment_1.png)
 
 ### Upload file from URL
 This action can be used to upload a file directly from a URL rather than through entering text content. This allows you to upload non-text files such as images. In the Source URL field, enter the URL for the file you want to upload. Attachment URLs will typically end with the file extension for the file (in the example below, .jpg). You will also need to select the folder you want to upload to. Entering a file name is optional as the name of the file will be obtained from the URL by default.
-![Box Attachment 2](/_uploads/box-docs/box_attachment_2.png)
+![Box Attachment 2](/assets/images/box-docs/box_attachment_2.png)
 
 ### Upload file content
 These actions allow you to create a direct link to a file or folder in Box. First, you will need to enter the File ID/Folder ID for the file/folder you want to create a shared link for. Next, select an access level for the link (Open, Company, Collaborators, or Default). This will set restrictions on who can view your file/folder via the shared link. If you have a Premium Box subscription, you can also enter a password that link users will need to enter before they can access your file/folder.
-![Box Attachment 3](/_uploads/box-docs/box_attachment_3.png)
+![Box Attachment 3](/assets/images/box-docs/box_attachment_3.png)
 
 ## Articles on how to use additional special actions, such as get shared link, etc.
 
 ### [Getting Shared Link of Box Folder/File](https://support.workato.com/support/solutions/articles/1000239285-box-how-to-get-shared-link-of-your-file-)
 You have to add action Create shared link for file in Box in order to make a file/folder sharable. In the example below, you can use the ID pill from the trigger step to identify the new file when creating shared URL link and post the URL in the schema(below) to your Slack Workbot. 
 
-![Box Shared Link 1](/_uploads/box-docs/box_shared_link_1.png)
-![Box Shared Link 2](/_uploads/box-docs/box_shared_link_2.png)
+![Box Shared Link 1](/assets/images/box-docs/box_shared_link_1.png)
+![Box Shared Link 2](/assets/images/box-docs/box_shared_link_2.png)
 
 ## Best practices in working with the Box connector
 

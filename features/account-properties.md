@@ -10,7 +10,7 @@ Account properties feature is enabled only for certain plans. Check the [Pricing
 
 For Workato accounts with account properties feature, users are able to view the account properties option on their account menu.
 
-![Account properties option](/_uploads/_features/account-properties/account_properties_option.png)
+![Account properties option](/assets/images/features/account-properties/account_properties_option.png)
 
 *Account properties menu option*
 
@@ -30,6 +30,6 @@ Manage account properties in the same table with edit and delete functions.
 # Use account properties
 Account properties show up in all recipes within the Workato account, under the *Properties* table, with the values as defined in the properties table.
 
-![Account properties datatree](/_uploads/_features/account-properties/account_properties_datatree.png)
+![Account properties datatree](/assets/images/features/account-properties/account_properties_datatree.png)
 
 *Using account properties from the datatree*

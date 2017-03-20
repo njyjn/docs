@@ -1,4 +1,4 @@
-![utilities icon](/_uploads/_features/Utilities/Utilities Icon.png)
+![utilities icon](/assets/images/features/Utilities/Utilities Icon.png)
 # Utilities 
 Workato's Utilities connector is useful for performing all sorts of tasks
 Here are the list of actions you can perform using 
@@ -30,18 +30,18 @@ In the Download file from URL section, you can provide a static URL if you inten
 ## Generate column chart 
 Using this action allows you to use data from two columns in a list to create a column chart to help visualize and analyze data better. Select a list from your recipe's app data, followed by 2 columns from the list. The X-axis should contain the independant value, while the Y axis contains the dependant value. 
 
-![chart](/_uploads/_features/Utilities/utilities-chart.png)
+![chart](/assets/images/features/Utilities/utilities-chart.png)
 
 ## Generate pie chart
 Using this action allows you to use data from two columns (name and values) in a list to create a pie chart to help visualize and analyze data better. 
 
-![piechart](/_uploads/_features/Utilities/utilities-piechart.png)
+![piechart](/assets/images/features/Utilities/utilities-piechart.png)
 
 ## Link two objects
 Linking two objects allows you to associate one object to another, and allows you to cme back to this connection in another recipe. Some simple coonnections includes a Salesforce account ID with a Zendesk ticket ID, for easy tracking. 
 
-![linkobject](/_uploads/_features/Utilities/utilities-linkobject.png)
+![linkobject](/assets/images/features/Utilities/utilities-linkobject.png)
 
 To come back to this connection in another recipe, use the **Get linked object** action under **Utilities**, select the object which exists in some part of the new recipe, and select which linked object you need. 
 
-![linkobject](/_uploads/_features/Utilities/utilities-getlinkobject.png)
+![linkobject](/assets/images/features/Utilities/utilities-getlinkobject.png)

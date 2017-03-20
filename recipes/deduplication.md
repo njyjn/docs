@@ -9,12 +9,12 @@ View this recipe to see an example of how deduplication can be done with Workato
 ### 1. Trigger
 In this recipe, the trigger event is a New or Updated Contact in Salesforce. This means that whenever a Contact is created or updated in Salesforce, the recipe runs.
 
-![trigger2](/_uploads/deduplication/trigger2.JPG)
+![trigger2](/assets/images/deduplication/trigger2.JPG)
 
 ### 2. Search
 The search action searches the QuickBooks for the Display name which corresponds to the Contact's full name in Salesforce. 
 
-![trigger](/_uploads/deduplication/trigger.JPG)
+![trigger](/assets/images/deduplication/trigger.JPG)
 
 #### Unique Identifiers in Applications
 To ensure that there is only 1 unique instance in each application when performing searches, use a unique identifer. In QuickBooks, the Display Name is one of them (ie. Display Names are unique in QuickBooks and no 2 customers can have the same display name). 
@@ -25,7 +25,7 @@ In other applications, commonly used identifiers are IDs and Record Numbers. The
 
 To ensure the search action is looking for a perfect match, the conditional action that follows uses the 'is present' and 'is not present' conditions. 
 
-![conditional](/_uploads/deduplication/conditional.JPG)
+![conditional](/assets/images/deduplication/conditional.JPG)
 
 **Tip:** If you wish to do a partial search, use the 'Contains' condition.
 
@@ -35,7 +35,7 @@ If a customer is found, the Customer ID will be present. In this case, we want t
 
 In step 4, if a Customer is not found, we want to create a new customer record using existing information from Salesforce.
 
-![conditional2](/_uploads/deduplication/conditional2.JPG)
+![conditional2](/assets/images/deduplication/conditional2.JPG)
 
 
 

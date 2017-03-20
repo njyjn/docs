@@ -8,6 +8,6 @@ Single sign-on allows users to use a single set of credentials (e.g. username an
 
 Workato supports single sign-on with Google, Salesforce, Slack, Intuit and Infusionsoft. This means that users can create a Workato account and sign in via their Google, Salesforce, Slack, Intuit or Infusionsoft usernames and passwords.
 
-![Single sign-on login](/_uploads/_user_accounts_and_teams/sso-login.png)
+![Single sign-on login](/assets/images/user-accounts-and-teams/sso-login.png)
 
 *Workato support for single sign-on*

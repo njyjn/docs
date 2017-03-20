@@ -11,18 +11,18 @@ rJD7hmlUodRmH3X4krGRFqY-l3X8P14SLw.png
 
 This is a sample of a recipe. The red digit is the number of errors or failed jobs while the green count is the number of successful jobs. You can check out your failed jobs at the "Jobs" section after you click into a recipe. Cli 
 
-![actionerror1](/_uploads/_recipes/_actionerror/actionerror-1.gif)
+![actionerror1](/assets/images/recipes/_actionerror/actionerror-1.gif)
 
 If you have many jobs in your job history, you can also filter out jobs based on the status of the jobs, so that you can see all the failed jobs at a glance. 
 
-![actionerror2](/_uploads/_recipes/_actionerror/actionerror-2.gif)
+![actionerror2](/assets/images/recipes/_actionerror/actionerror-2.gif)
 
 ## Understanding failed job messages
 
 Now that you know how to view failed jobs, its time to learn how to understand failed job messages. When you click onto the failed job, you will be able to take a look at the job page.
 
 
-![actionerror3](/_uploads/_recipes/_actionerror/actionerror-3.png)
+![actionerror3](/assets/images/recipes/_actionerror/actionerror-3.png)
 
 
 The job page has a few pieces of information that you should be aware of : 
@@ -55,32 +55,32 @@ Errors are messages that are very important to understand what is wrong. You sho
 
 Knowing where the source of error is coming from is also very useful to know why is the error being thrown. For example, When we try to make a contact marketable, you may hit an error that is unique to only Infusionsoft : 
  
- ![actionerror5](/_uploads/_recipes/_actionerror/actionerror-5.png)
+ ![actionerror5](/assets/images/recipes/_actionerror/actionerror-5.png)
 
 Errors like this give a whole lot more context into what went wrong, and what can you do to fix them.
 
 Identifying the step that error that was being thrown is the most important. The first thing you will need to do is to associate the input data in that step with the error message. 
 
-![actionerror6](/_uploads/_recipes/_actionerror/actionerror-6.png)
+![actionerror6](/assets/images/recipes/_actionerror/actionerror-6.png)
 
 Seems that the company field is empty in my recipe. I need to have a company in my Salesforce's Lead to create one
 
 I then go back to my recipe, and see what is filled in the Company field in Step 3. Seems like I have a data pill in that field already. I click on the data pill, and it shows that it comes from the Trigger. 
 
-![actionerror7](/_uploads/_recipes/_actionerror/actionerror-7.png)
+![actionerror7](/assets/images/recipes/_actionerror/actionerror-7.png)
 
 Now, I will check what is the actual data that the specific failed job received from the trigger record. I look for the Company value under Profile (where the data pill came from), and found that it does not exist. Seems that the reason that the recipe failed was because it used a data pill that has no value in it. 
 
-![actionerror8](/_uploads/_recipes/_actionerror/actionerror-8.png)
+![actionerror8](/assets/images/recipes/_actionerror/actionerror-8.png)
 
 I want to make sure that there is always value provided in required fields. To do so, I will need to be able to choose a second alternative data pill that I can ensure there is always value in it. 
 
-![actionerror9](/_uploads/_recipes/_actionerror/actionerror-9.png)
+![actionerror9](/assets/images/recipes/_actionerror/actionerror-9.png)
 
 
 In this case, I know that there is always a First Name in the Eventbrite's profile. I will turn on formula mode, and put an OR in between the data pills.
 
-![actionerror10](/_uploads/_recipes/_actionerror/actionerror-10.png)
+![actionerror10](/assets/images/recipes/_actionerror/actionerror-10.png)
 
 Now, if the data pill "Company" does not have any value, it will use the value that comes from First Name. I make the change in my recipe, and try re-running the failed job. Seems like it's been completed!
 
@@ -91,7 +91,7 @@ To find information on the errors you are facing, simply run a search on our hel
 
 Trigger warnings are messages that appear at the top of a recipe upon starting it. Warnings look similar to this:
 
-![consecerror](/_uploads/startstop/consecerror.png)
+![consecerror](/assets/images/startstop/consecerror.png)
 
 ## What is the difference between a job error and a trigger warning? 
 

@@ -22,7 +22,7 @@ When an error is detected in your recipes, an email will be sent to the Notifica
 Thus, rerunning the job is necessary to ensure the job runs to completion as specified in the recipe.
 
 You can view all the errors in the 'Jobs' tab and filtering the report. 
-![actionerror2](/_uploads/_recipes/_actionerror/actionerror-2.gif)
+![actionerror2](/assets/images/recipes/_actionerror/actionerror-2.gif)
 
 
 #### No fixing of the recipe is required
@@ -52,16 +52,16 @@ Completed jobs are those that have successfully run through the recipe while fai
 
 Check the boxes on the left of each line and click 'Rerun'. You can rerun 10 jobs (1 page of jobs) at a time. 
 
-![Rerunjobs](/_uploads/rerun-jobs/Rerunjobs.JPG)
+![Rerunjobs](/assets/images/rerun-jobs/Rerunjobs.JPG)
 
 
 ### Job Report
 
 The rerun job button is located on the top right hand corner of the job report page. Click on this to rerun the job and you will be re-directed to the 'Jobs' tab.
 
-![rerunjobbutton](/_uploads/rerun-jobs/rerunjobbutton.JPG)
+![rerunjobbutton](/assets/images/rerun-jobs/rerunjobbutton.JPG)
 
 #### Rerun History
 All rerun jobs have a history log at the bottom of the job details page. Click on each line to view the previously run jobs. 
 
-![rerunhistory](/_uploads/rerun-jobs/rerunhistory.JPG)
+![rerunhistory](/assets/images/rerun-jobs/rerunhistory.JPG)

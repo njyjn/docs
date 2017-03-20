@@ -28,7 +28,7 @@ The following shows the different fields required for the available connection o
 
 The managed user has to retrieve the API key from their **Account settings > API key**.
 
-![API key](/_uploads/recipe-ops/api-key.png)
+![API key](/assets/images/recipe-ops/api-key.png)
 
 *Retrieve API key from Settings > API key*
 
@@ -45,7 +45,7 @@ When monitoring selected recipes, provide the IDs of recipes to watch.
 
 Recipe IDs can be found in the recipe page URL as highlighted below.
 
-![Recipe URL](/_uploads/recipe-ops/recipe-url.png)
+![Recipe URL](/assets/images/recipe-ops/recipe-url.png)
 
 *Recipe IDs can be found in recipe URL*
 
@@ -66,7 +66,7 @@ When monitoring selected recipes, provide the IDs of recipes to watch.
 
 Recipe IDs can be found in the recipe page URL as highlighted below.
 
-![Recipe URL](/_uploads/recipe-ops/recipe-url.png)
+![Recipe URL](/assets/images/recipe-ops/recipe-url.png)
 
 *Recipe IDs can be found in recipe URL*
 
@@ -75,7 +75,7 @@ Recipe IDs can be found in the recipe page URL as highlighted below.
 ### Get account details action
 Get information about the Workato account, such as subscription plan type, allotted and remaining transaction counts, recipe and connection counts.
 
-![Get account details output datatree](/_uploads/recipe-ops/get-account-details.png)
+![Get account details output datatree](/assets/images/recipe-ops/get-account-details.png)
 
 *Available account details datapills for use*
 

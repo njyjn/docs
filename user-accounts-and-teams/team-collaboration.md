@@ -11,7 +11,7 @@ Team feature is enabled only for certain plans. Check the [Pricing and Plans pag
 # Team owner permissions
 For Workato accounts with team access, team owners are able to view the team option on their account menu.
 
-![Team option](/_uploads/_user_accounts_and_teams/team-collaboration/team-option.png)
+![Team option](/assets/images/user-accounts-and-teams/team-collaboration/team-option.png)
 
 *Team feature menu option*
 
@@ -29,7 +29,7 @@ The default roles for teams are:
 
 The following table details the specific set of permissions each role has.
 
-![Roles table](/_uploads/_user_accounts_and_teams/team-collaboration/roles-table.png)
+![Roles table](/assets/images/user-accounts-and-teams/team-collaboration/roles-table.png)
 
 *Access rights comparison*
 
@@ -69,6 +69,6 @@ Team members will be able to view the teams they are collaborating on in their a
 # Audit logs
 Recipe changes are logged under **Versions** tab and attributed to the collaborator who made the change. Older versions of the recipe can be restored by users with admin or analyst roles.
 
-![Recipe versions](/_uploads/_user_accounts_and_teams/team-collaboration/recipe-versions.png)
+![Recipe versions](/assets/images/user-accounts-and-teams/team-collaboration/recipe-versions.png)
 
 *Recipe audit log in Versions tab*

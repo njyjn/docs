@@ -185,7 +185,7 @@ The optional connection `fields` use the [schema](#schema---describing-inputoutp
 
 use the [schema](#schema---describing-inputoutput) notation to describe the connection's properties, shown wherever the connection configuration is displayed, for example in the recipe's connection tab:
 
-![connection_settings.png](/_uploads/connection_settings.png)
+![connection_settings.png](/assets/images/connection_settings.png)
 
 ## Authorization
 
@@ -243,7 +243,7 @@ Continuing with our "get customer by ID" action example:
         end,
 ```
 
-![input_form.png](/_uploads/input_form.png)
+![input_form.png](/assets/images/input_form.png)
 
 ## Output tree
 
@@ -269,7 +269,7 @@ Using the same [schema](#schema---describing-inputoutput) notation, `output_fiel
         end,
 ```
 
-![output_tree.png](/_uploads/output_tree.png)
+![output_tree.png](/assets/images/output_tree.png)
 
 ## `execute`
 

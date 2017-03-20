@@ -45,7 +45,7 @@ Once you have confirgured the trigger as above, you will need to set up the goog
 In this case, there are 2 parameters that need to be provided as shown in the **Command Input** field, namely Name and Quantity. Thus, the command in this case would be **Google Sheets** > **Create New Row** > **\<Name>** > **\<Quantity>** 
 Take a look at the GIF below for a better understanding of how to use the command.
 
-![command-example](/_uploads/Workbot/workbot-trigger/workbot-trigger-example.gif)
+![command-example](/assets/images/Workbot/workbot-trigger/workbot-trigger-example.gif)
 
 With this simple example, you should now be able to build your own workbot command recipe. 
 
@@ -68,7 +68,7 @@ Parameter name \<space> options: \<space> option 1,\<space> option 2, \<space> o
 
 New URL mention allows Workbot to pull data from a URL sent into a channel where Workbot is in. For example, when someone in a channel sends a URL of a Salesforce lead or a Github issue, workbot can generate a message reply to immediately provide you with context of the contents of the link. 
 
-![workbot url](/_uploads/Workbot/workbot-trigger/workbot-URL.gif)
+![workbot url](/assets/images/Workbot/workbot-trigger/workbot-URL.gif)
 
 By default, simply by having workbot installed, workbot will prompt you the first time you send a URL in a chat where workbot is in to ask if you want to get the object data. 
 

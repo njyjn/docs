@@ -6,7 +6,7 @@ date: 2017-03-04 18:00:00 Z
 # App connections
 Recipes are automated worflows that read data from and write data to apps. In order to interact with app data, Workato needs to be connected to these applications. Connectors typically require a connection before triggers and actions can be configured, as they need to retrieve custom objects and custom fields from the connected apps.
 
-![Unconnected Salesforce action](/_uploads/_recipes/connections/unconnected-salesforce-action.png)
+![Unconnected Salesforce action](/assets/images/recipes/connections/unconnected-salesforce-action.png)
 
 *Recipe prompts user to connect to their Salesforce organization. Picklist is greyed out because the Salesforce connector does not know what objects are available in the unconnected organization.*
 
@@ -25,24 +25,24 @@ For more information on connecting to a specific app, refer to the specific conn
 ## Example of OAuth2 authentication flow for Salesforce
 The following recipe requires both Salesforce and a Zendesk connections, which are OAuth2. The **Connection** tab within the recipe shows further details about the app connections.
 
-![Example recipe](/_uploads/_recipes/connections/example-recipe.png)
+![Example recipe](/assets/images/recipes/connections/example-recipe.png)
 [Example recipe](https://www.workato.com/recipes/480360)
 
 The following shows the **Connections** tab. Zendesk has been connected, but the Salesforce connector has no connection established yet.
 
-![Unconnected Salesforce](/_uploads/_recipes/connections/unconnected-salesforce.png)
+![Unconnected Salesforce](/assets/images/recipes/connections/unconnected-salesforce.png)
 
 *Recipe without a Salesforce connection established*
 
 Clicking on the **Connect** button generates a popup that requests for Salesforce login credentials. Because Salesforce utilizes the standard OAuth2 authentication flow, usernames and passwords are provided only to Salesforce. Providing these credentials assure Salesforce that the user is giving permission for Workato to access their Salesforce data.
 
-![Salesforce connection popup](/_uploads/_recipes/connections/salesforce-connection-popup.png)
+![Salesforce connection popup](/assets/images/recipes/connections/salesforce-connection-popup.png)
 
 *OAuth2 authentication popup for Salesforce*
 
 After providing credentials, Salesforce will show up as connected.
 
-![Connected Salesforce](/_uploads/_recipes/connections/connected-salesforce.png)
+![Connected Salesforce](/assets/images/recipes/connections/connected-salesforce.png)
 
 *Recipe with Salesforce and Zendesk connections established*
 
@@ -67,7 +67,7 @@ Most Workato connectors allow only one connection to used in a a recipe. There a
 
 The recipe correspondingly requires two Salesforce connections.
 
-![Secondary Salesforce connections](/_uploads/_recipes/connections/secondary-app-connections.png)
+![Secondary Salesforce connections](/assets/images/recipes/connections/secondary-app-connections.png)
 
 *Primary and secondary Salesforce connections*
 

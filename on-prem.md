@@ -8,14 +8,14 @@ Workato is a hybrid integration platform that connects to both cloud application
 
 For Workato accounts with on-prem access, users are able to view the on-prem option on their account menu.
 
-![On-prem option](/_uploads/on-prem/on_prem_access_option.png)
+![On-prem option](/assets/images/on-prem/on_prem_access_option.png)
 
 *On premise menu option*
 
 # On-premise overview
 The following is a conceptual model of Workato's on-premise agent and connector and how it interacts with applications and databases behind the firewall.
 
-![On-prem model](/_uploads/on-prem/on_prem_conceptual_model.png)
+![On-prem model](/assets/images/on-prem/on_prem_conceptual_model.png)
 
 *Conceptual model for on-prem agent and connector*
 
@@ -44,13 +44,13 @@ macOS:
 
 Verify that the agent is active on the **On-prem access* page.
 
-![On-prem status](/_uploads/on-prem/agent_connector_status.png)
+![On-prem status](/assets/images/on-prem/agent_connector_status.png)
 
 *Active/inactive status for on-prem agent and connector*
 
 With an active agent, connect to on-premise applications by selecting the correct agent and providing the required credentials.
 
-![On-prem agent example](/_uploads/on-prem/agent_example.png)
+![On-prem agent example](/assets/images/on-prem/agent_example.png)
 
 *Selecting the Database on-prem agent when connecting to JIRA*
 
@@ -73,13 +73,13 @@ macOS:
 
 Verify that the connector is active on the **On-prem access* page.
 
-![On-prem status](/_uploads/on-prem/agent_connector_status.png)
+![On-prem status](/assets/images/on-prem/agent_connector_status.png)
 
 *Active/inactive status for on-prem agent and connector*
 
 With an active agent and connector, connect to on-premise databases by selecting the correct agent and connection profile. As the credentials should have been provided in the connection profile, it is not required.
 
-![On-prem connector example](/_uploads/on-prem/connector_example.png)
+![On-prem connector example](/assets/images/on-prem/connector_example.png)
 
 *Selecting the on-prem agent Events Team and providing configured connection profile name sql as input*
 

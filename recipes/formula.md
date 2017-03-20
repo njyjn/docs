@@ -8,29 +8,29 @@ Formula mode is a toggled mode for almost any input field in Workato, allowing y
 When you are defining the input for a field, you can be in Text mode or Formula mode, indicated by the box at the right of the field. 
 You can toggle between the two modes by hovering your cursor over the top right hand corner of a field and simply clicking on the button.
 
-![what_is_formula](/_uploads/formula-docs/what_is_formula_gif.gif)
+![what_is_formula](/assets/images/formula-docs/what_is_formula_gif.gif)
 
 ## Text Mode VS Formula Mode
 
 The default is text mode. In text mode you can assign plain text or map any field from the input data you have available to you, and it will appear as the input. In text mode you can add more than one field too, for example you can put first name, and last name next to each other.
 
-![text_mode](/_uploads/formula-docs/text_mode.png)
+![text_mode](/assets/images/formula-docs/text_mode.png)
 
 Formula Mode on the other hand, allows you to manipulate the data from each field (pill) into a desired format. When you toggle to formula mode, you see a slightly different view of the input field, with some of your text being colored. You will also see the smbol "fx" on the left, to indicate that you are in formula mode. Formula mode allows you to manipulate data within data pills, depending on the command that you have put in. In the example below, we have a command that sends a message to a customer's email to notify them to check their SMS inbox, but only shows the last 4 digits of their phone number by using the ".slice" command. Simply put, we have used a formula mode command to extract the last 4 digits of the data from the pill "Phone" 
  
-![formula_mode](/_uploads/formula-docs/formula_mode.png)
+![formula_mode](/assets/images/formula-docs/formula_mode.png)
 
 ## Dynamic list of formulas
 Formula mode accepts operators and methods to transform the data in the input field. You can bring up a simple list of commonly used formula methods by appending a period to the end of your data. The choices will dynamically show up below, and is dependent on the type of the data - number, text, date etc. It also contains a description of what the formula does, with example input and output with regards to the highlighted formula. 
 
-![formula_list](/_uploads/formula-docs/formula_list.png)
+![formula_list](/assets/images/formula-docs/formula_list.png)
 
 ## Using Ruby ternary syntax in Formula mode to perform conditional statements
 When your field is toggled into formula mode, you can make use of ternary syntax from Ruby to perform conditional (if-else) statements. This allows you to use certain data pills under a certain condition, else use a different data pill.
 
 In the example below the invoice date is mapped from a field called 'Date' and is involved in a conditional statement written in ternary syntax. For more information on what ternary syntax in Ruby is, click [here](http://www.w3resource.com/ruby/ruby-ternary-operator.php).
 
-![ternary syntax](/_uploads/formula-docs/check_input_date.png)
+![ternary syntax](/assets/images/formula-docs/check_input_date.png)
 
 <u>What is it doing?</u>
 
@@ -104,11 +104,11 @@ Using a combination of date formulas, and date arithmetics, we can easily obtain
 
 ##### Beginning of Current Month
 Firstly, turn on formula mode and we have access to the .beginning_of_month function. It returns the date for the start of the month for the given date/timestamp.
-![beginning of current month](/_uploads/formula-docs/beginning_of_current_month.png)
+![beginning of current month](/assets/images/formula-docs/beginning_of_current_month.png)
 
 ##### Beginning of Next Month
 To retrieve a date for the beginning of the next month, we simply need to add a month to the input date, and use the previously mentioned function get the beginning of the month.
-![beginning of next month](/_uploads/formula-docs/beginning_of_next_month.png)
+![beginning of next month](/assets/images/formula-docs/beginning_of_next_month.png)
 
 ##### End of Current or Next Month
 While the beginning_of_month function will always give you the 1st day of the month, retrieving the end of the month is a little trickier because some months have 31 days while others have less.
@@ -116,10 +116,10 @@ While the beginning_of_month function will always give you the 1st day of the mo
 Instead, we can apply some simple arithmetic to obtain the last date of the month. 
 
 To retrieve the last date of the current month :        
-![last date of current month](/_uploads/formula-docs/last_date_current_month.png)
+![last date of current month](/assets/images/formula-docs/last_date_current_month.png)
 
 To retrieve the last date of the next month:        
-![last date of next month](/_uploads/formula-docs/last_date_next_month.png)
+![last date of next month](/assets/images/formula-docs/last_date_next_month.png)
 
 ### Number Formulas
 Workato formula mode supports many functions that can be used on numbers. 
@@ -161,9 +161,9 @@ If Amount pill's value is 45 and Qty pill's value is 5, the results will be as f
 ### Others
 
 #### Processing Arrays/Lists 
-When you have a List (a type of Array) returned to you, you may only want specific sets of information. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the  ![array symbol](/_uploads/formula-docs/array_symbol.png) symbol.
+When you have a List (a type of Array) returned to you, you may only want specific sets of information. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the  ![array symbol](/assets/images/formula-docs/array_symbol.png) symbol.
 
-!![pluck_where_1](/_uploads/formula-docs/pluck_where_1.png)
+!![pluck_where_1](/assets/images/formula-docs/pluck_where_1.png)
 
 ##### Formulas to manipulate Lists/Arrays
 If you would like to retrieve the account records based on a specific filter condition (e.g. only those which are Active), you can use the where function on the "Accounts" list pill. 
@@ -174,9 +174,9 @@ Do note that using the where or pluck function on the (Accounts) list pill will 
 
 #### Pluck Function
 The pluck function allows you to pluck desired fields from an array of objects or hashes. This is useful in a few scenarios. The most common use will be described here.
-Sometimes a step in your recipe (e.g. a search action) may output a List containing many objects. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the ![array symbol](/_uploads/formula-docs/array_symbol.png) symbol.
+Sometimes a step in your recipe (e.g. a search action) may output a List containing many objects. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the ![array symbol](/assets/images/formula-docs/array_symbol.png) symbol.
 
-!![pluck_where_1](/_uploads/formula-docs/pluck_where_1.png)
+!![pluck_where_1](/assets/images/formula-docs/pluck_where_1.png)
 
 When you have a List, you may want to extract the values of certain fields from each object within it. Continuing with the search accounts example, pretend you want to know the Name and Account Type for all of the Accounts returned by the search.
 First, click in the input field where you want to enter this information and turn on formula mode. This will make the List pillable so that you can select it and add it to your field. Now, you can "pluck" any available field from the List you selected and the function will return an array containing the value of that field for each object in the list.
@@ -186,22 +186,22 @@ The tricky part now is using the correct name to pluck the field. The names disp
 
 The first place you can find the API names for a field is the recipe output from a completed job. For example to find names for Account fields, you can look at successful output for any triggers or actions related to Accounts. You can also create a test recipe and search for an Account that you know exists. Here is the recipe job output for the search accounts action that lists all of the fields available by API name:
 
-!![pluck_where_1](/_uploads/formula-docs/pluck_where_2.png)
+!![pluck_where_1](/assets/images/formula-docs/pluck_where_2.png)
 
 The other place you can find the API names for a field is the actual API for the application you are using. Many APIs will publish the fields available for each object. However, not all APIs are easy to navigate so this method may take some more time and effort.
 
 ##### Using the Pluck Function
 Once you know the API names for the fields you want, you can write your formula. The format for the pluck function is as follows: [List Data Pill].pluck('APIname'). If you want to pluck additional fields, simply separate them with a comma: [List Data Pill].pluck('APIname1', 'APIname2', 'APIname3'). Referring back to the current example, the formula to pluck Name and Account Type from the Accounts List would be:
 
-!![pluck_3](/_uploads/formula-docs/pluck_3.png)
+!![pluck_3](/assets/images/formula-docs/pluck_3.png)
 
 ##### Formatting the Results
 The pluck function will return fields in the form of an array. However, arrays cannot usually be used directly in text fields. You can use additional formulas that convert Arrays into Strings to format the results correctly. Some formulas you can use to do this are: join, smart_join, and to_s. 
 
 #### Where Function
-The where function can be used in combination with other functions (such as pluck) in order to filter information from a List (a type of Array). Since the where function returns an Array (the filtered List), any added function must be able to work with Arrays. The where function is useful when a step in your recipe (e.g. a search action) outputs a List containing many objects. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the ![array symbol](/_uploads/formula-docs/array_symbol.png) symbol. 
+The where function can be used in combination with other functions (such as pluck) in order to filter information from a List (a type of Array). Since the where function returns an Array (the filtered List), any added function must be able to work with Arrays. The where function is useful when a step in your recipe (e.g. a search action) outputs a List containing many objects. For example, the image below shows the step output for a search accounts action. Here, a List of Account objects is returned containing all of the fields displayed under it (Name, Sub account, etc.) for each Account object. List fields are always marked with the ![array symbol](/assets/images/formula-docs/array_symbol.png) symbol. 
 
-!![pluck_where_1](/_uploads/formula-docs/pluck_where_1.png)
+!![pluck_where_1](/assets/images/formula-docs/pluck_where_1.png)
 
 When you have a List, you can work with it in many ways. For example, you may use the pluck function to extract the values of certain fields from each object within the List. However, in some cases you may want to narrow down the objects you want to work with before applying such a function. You can do this using the where function.
 
@@ -210,14 +210,14 @@ Just as with the pluck function, you will need to find the correct API name for 
 
 The first place you can find the API names for a field is the recipe output from a completed job. For example to find names for Account fields, you can look at successful output for any triggers or actions related to Accounts. You can also create a test recipe and search for an Account that you know exists. Here is the recipe job output for the search accounts action that lists all of the fields available by API name:
 
-!![pluck_where_1](/_uploads/formula-docs/pluck_where_2.png)
+!![pluck_where_1](/assets/images/formula-docs/pluck_where_2.png)
 
 The other place you can find the API names for a field is the actual API for the application you are using. Many APIs will publish the fields available for each object. However, not all APIs are easy to navigate so this method may take some more time and effort.
 
 ###### Using the Where Function
 Once you know the API names for the fields you want, you can write your formula. The format for the where function is as follows: [List Data Pill].where('APIname': 'filterValue'), simply separate them with a comma: [List Data Pill].where('APIname1': 'filterValue1', 'APIname2': 'filterValue2', 'APIname3': 'filterValue3'). Now you can add the main function you want to use to the end of the where formula. You can add on any formula that works with an Array. The combined formula will return whatever the last formula applied returns. Here is an example using the pluck function:
 
-!![where_3](/_uploads/formula-docs/where_3.png)
+!![where_3](/assets/images/formula-docs/where_3.png)
 
 Remember that the pluck function will return an array object, so you will typically need to add on another formula such as to_s that converts an Array to a String.
 

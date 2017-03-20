@@ -17,7 +17,7 @@ The JIRA connector works only with JIRA cloud instances. These instances can be 
 
 ### JIRA connection
 The JIRA connector uses basic authentication to authenticate with JIRA.
-![Configured JIRA connection](/_uploads/jira-docs/configured_jira_connection.png)
+![Configured JIRA connection](/assets/images/jira-docs/configured_jira_connection.png)
 * **Connection name**
 
   Give this JIRA connection a unique name that identifies which JIRA instance it is connected to.
