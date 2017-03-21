@@ -93,6 +93,7 @@
     * [Conceptual model](developer/sdk/sdk-conceptual-model.md)
     * [SDK documentation](developer/sdk/sdk-docs.md)
   * Platform API
+----------------
 * Recipe Development Life Cycle
   * Model/diagram of the RDLC
   * Sandbox\*Production
