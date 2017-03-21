@@ -85,6 +85,7 @@
   * [Infinite loops](recipes/infinite-loops.md)
   * [Deduplication](recipes/deduplication.md)
   * [Rate limiting](recipes/rate-limiting.md)
+----------------
 * [Developer](developer.md)
   * Conceptual model
   * [Comparison of HTTP VS SDK](developer/http-vs-sdk.md)
