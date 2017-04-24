@@ -31,6 +31,8 @@ These are all the fields available in a **Post command reply** action. We will g
 
 Here is what the Post Command Reply action's output will look like in Slack.
 
+![Workbot1](/assets/images/Workbot/Workbot/workbot-custom-commands/workbot-cc-1.png)
+
 ## Post notifications
 This action allows you to post customized notifications to Slack channels.
 
