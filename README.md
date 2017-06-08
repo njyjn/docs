@@ -44,3 +44,5 @@ Governance is a key requirement for any platform that allows business users to w
 
 ## Extensible platform
 Workato’s platform is extensible to add support for new applications beyond the many that are available pre-built. A powerful and configurable REST data connector allows integration to many systems without writing of code. Workato also provides a Connector SDK that handles and abstracts multiple aspects of application and data integration for cases where custom development is required. Existing connectors can be extended via the SDK or via adding functions from the REST connector. In addition, a public API allows control of recipes from third-party applications.
+
+add your edits here
