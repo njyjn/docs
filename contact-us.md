@@ -38,5 +38,11 @@ To navigate to the forums from Workato, click on **Help** on the top navigation 
 Our documentation is on Github. If you spot something missing, or if you have additional information you'd like to add to our documentation, you can reach out to us via:
 
 1) Filing a Github issue and providing us with the information in that issue.
+![Forums](/assets/images/contact-us/submit_issue.gif)
+*filing a Github issue*
 
 2) Make an edit to the documentation and submit a pull request! Our team will review and merge your pull requests.
+![Forums](/assets/images/contact-us/edit_page_1.gif)
+*edit the documentation*
+![Forums](/assets/images/contact-us/edit_page_2.gif)
+*edit the documentation*
