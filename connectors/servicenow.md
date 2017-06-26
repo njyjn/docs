@@ -41,21 +41,21 @@ In addition, to use the generic triggers and actions on our ServiceNow connector
 
 ## Working with the ServiceNow connector
 ### Using generic triggers and actions
-In addition, to use the generic triggers and actions on our ServiceNow connector, the connected ServiceNow user needs to have the **admin** role in order to access the full list of possible tables (ServiceNow objects, such as incidents), as well as the columns in that table (the fields in that ServiceNow object, such as incident ID and short description).
+In addition, to use the generic triggers and actions on our ServiceNow connector, the connected ServiceNow user needs to have the **admin** role to access the full list of possible tables (ServiceNow objects, such as incidents), as well as the columns in that table (the fields in that ServiceNow object, such as incident ID and short description).
 
 
 ## Troubleshooting
 
 ### Can't find a table from the table dropdown menu
 
-When using ServiceNow, you have to select a specific table when using actions such as search, create, update objects for generic objects. Sometimes you may not find your table in the table drop down list. This can also happen when you are configuring your Trigger for new/updated objects. 
+When using ServiceNow, you have to select a specific table when using actions such as search, create, or update objects for generic objects. Sometimes you may not find your table in the table drop down list. This can also happen when you are configuring your Trigger for new/updated objects. 
 
 For example, this is how your drop down could look:
 
 ![Table options](/assets/images/connectors/servicenow/table.png)
 *sample table dropdown menu*
 
-However, should you not be able to find the table you require, you can always toggle the 'Table' option by clicking on the arrow to the right of the name, and select 'Enter custom value', and type in name of actual table in the field. Once you enter the name, click outside the field so that Workato fetches the definition for that table.
+However, should you not be able to find the table you require, you can always toggle the 'Table' option by clicking on the arrow to the right of the name, and select 'Enter custom value', and type in name of the actual table in the field. Once you enter the name, click outside the field so that Workato fetches the definition for that table.
 
 ![Custom value](/assets/images/connectors/servicenow/servicenow.gif)
 *custom value*
@@ -67,7 +67,7 @@ Do note that the table has to be it's EXACT internal name, e.g. change_request, 
 
 ### ServiceNow error: 784: Unexpected Token
 
-This error means that the connected account is susupended. Contact your ServiceNow Sales contact or administrator to re-enable your instance 
+This error means that the connected account is suspended. Contact your ServiceNow Sales contact or administrator to re-enable your instance 
 
 
 ##What permissions do I need to connect to the ServiceNow connector?
