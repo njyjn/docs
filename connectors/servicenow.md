@@ -54,7 +54,7 @@ When using ServiceNow, you have to select a specific table when using actions su
 For example, this is how your drop down could look:
 
 ![Table options](/assets/images/connectors/servicenow/table-workato.png)
-*sample table dropdown menu*
+*Sample table dropdown menu*
 
 However, should you not be able to find the table you require, you can always toggle the 'Table' option by clicking on the arrow to the right of the name, and select 'Enter custom value', and type in name of the actual table in the field. Once you enter the name, click outside the field so that Workato fetches the definition for that table.
 
@@ -76,7 +76,7 @@ This error means that the connected account is suspended. Contact your ServiceNo
 The Servicenow connector on Workato has generic object triggers and actions (that allows you to select the table you want from a picklist of any tables) as well as specific triggers and actions (that allows you to read/write to specific tables).
 
 ![Configure trigger](/assets/images/connectors/servicenow/configure-trigger.png)
-*list of ServiceNow trigger*
+*List of ServiceNow trigger*
 
 To use the generic triggers and actions on our ServiceNow connector, the connected ServiceNow user needs to have the **admin** role in order to access the full list of possible tables (ServiceNow objects, such as incidents), as well as the columns in that table (the fields in that ServiceNow object, such as incident ID and short description).
 
@@ -85,4 +85,4 @@ To use non-generic triggers and actions, the connected ServiceNow user needs to 
 Here's a quick view of the user management screen in ServiceNow. More roles can be added to suit whatever ServiceNow tables/objects you wish to read/write to.
 
 ![Management Screen](/assets/images/connectors/servicenow/management-screen.png)
-*management screen in ServiceNow*
+*Management screen in ServiceNow*
