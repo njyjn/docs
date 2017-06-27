@@ -58,6 +58,7 @@
   * [Freshdesk](connectors/freshdesk.md)
   * [JIRA](connectors/jira.md)
   * [NetSuite](connectors/netsuite.md)
+  * [Oracle EBS](connectors/oracle-ebs.md)
   * [QuickBooks Online](connectors/quickbooks.md)
   * [Salesforce](connectors/salesforce.md)
   * [ServiceNow](connectors/servicenow.md)
