@@ -7,7 +7,7 @@ date: 2017-02-16 06:15:00 Z
 
 [ServiceNow](https://www.servicenow.com/) allows employees and customers to get the services that they need organized in one place.
 
-Some supported ServiceNow triggers on Workato include **New object** and **New/Updated Object** including certain real-time triggers.
+Some supported [ServiceNow](https://www.workato.com/integrations/service_now) triggers on Workato include **New object** and **New/Updated Object** including certain real-time triggers.
 
 On this page we'll walk you through:
 1. [Connector information](http://docs.workato.com/connectors/servicenow.html#connector-information)
