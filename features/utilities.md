@@ -23,6 +23,8 @@ In workato, to use the repeat action requires a List item to be present. However
 
 First, create the **create list** action, and determine the size you want to use. Next, you can create a repeat action any time after the **Create list** action. Then, use the **list** pill from the **create list** step's output in the **Input list** field. Once you have configured your recipe, it will repeat the set of actions the same number of times as the size of the list.
 
+![repeat_list_action](/assets/images/features/Utilities/repeat-list-action.png)
+
 ## Download file from URL
 Downloading a file in a recipe allows you to use that file later in the recipe, usually to upload onto another app. However, downloaded text content can be used directly into the recipe. Downloading a file **does not mean** that you will see that file on your computer. It is merely download for use in a recipe. Take note the maximum file size you can download is **25MB**.
 
