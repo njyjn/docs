@@ -73,3 +73,80 @@ end
 ```
 
 See [Methods](/developing-connectors/sdk/methods.md) section for list of methods available for use in your custom connector actions.
+
+### Output
+
+Did you notice that some requests were encapsulated in `{ }`, and some were not? This will depend on what your endpoint returns and how you would like to map the response to your `output_definition`. Typically, most REST endpoints would return a JSON response, whether the request was successful or not.
+
+Here are two examples. In all cases, the SDK expects the last line of the execute block to be a Hash object.
+
+Assume that the output from an example endpoint is as so
+
+```json
+{
+  "email": "j@a.co"
+}
+```
+
+#### 1. Simple object output
+
+Encapsulating the response from the `GET` method within a Hash `{ }` would suffice, since it maps directly into our `output_fields` definition.
+
+```ruby
+execute: lambda do |connection, input|
+  {
+    get("https://api.example.com/v1/email")
+  }
+end,
+
+output_fields: lambda do
+  [
+    { name: "email" }
+  ]
+end
+```
+
+
+#### 2. Nested object output
+
+Here we need to take the extra step of mapping the response returned as a nested Hash object.
+
+```ruby
+execute: lambda do |connection, input|
+  response = get("https://api.example.com/v1/email")
+  
+  { user: response }
+end,
+
+output_fields: lambda do
+  [
+    { name: "user", type: :object, properties: [
+      { name: "email" }
+    ] }
+  ]
+end
+```
+
+Do also take precautions if the endpoint returns a non-JSON response, e.g. `"j@a.co"`. If you do not encapsulate these into a final Hash object, you may get this commonly seen error:
+
+```
+undefined method `to_hash` for "j@a.co":String
+Did you mean? to_s
+```
+
+Use the method `response_format_raw` in these cases
+
+```ruby
+execute: lambda do |connection, input|
+  response = get("https://api.example.com/v1/email").
+    response_format_raw
+
+    { email: response }
+end,
+
+output_fields: lambda do
+  [
+    { name: "email" }
+  ]
+end
+```
