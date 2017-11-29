@@ -90,13 +90,11 @@ Assume that the output from an example endpoint is as so
 
 #### 1. Simple object output
 
-Encapsulating the response from the `GET` method within a Hash `{ }` would suffice, since it maps directly into our `output_fields` definition.
+Here, we can leave the `GET` method alone, since it maps directly into our `output_fields` definition.
 
 ```ruby
 execute: lambda do |connection, input|
-  {
-    get("https://api.example.com/v1/email")
-  }
+  get("https://api.example.com/v1/email")
 end,
 
 output_fields: lambda do
@@ -114,8 +112,26 @@ Here we need to take the extra step of mapping the response returned as a nested
 ```ruby
 execute: lambda do |connection, input|
   response = get("https://api.example.com/v1/email")
-  
+
   { user: response }
+end,
+
+output_fields: lambda do
+  [
+    { name: "user", type: :object, properties: [
+      { name: "email" }
+    ] }
+  ]
+end
+```
+
+or 
+
+```ruby
+execute: lambda do |connection, input|
+  {
+    user: get("https://api.example.com/v1/email")
+  }
 end,
 
 output_fields: lambda do
