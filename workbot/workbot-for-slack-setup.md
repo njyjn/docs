@@ -6,9 +6,9 @@ date: 2017-03-30 05:00:00 Z
 # Workbot for Slack setup
 In this article, we cover how to setup Workbot in your Slack organization:
 
-1. Add Workbot to Slack
-2. Connect Workbot to your apps
-3. Invite Workbot to channels
+1. [Add Workbot to Slack](/workbot/workbot-for-slack-setup.md#1-add-workbot-to-slack)
+2. [Connect Workbot to your apps](/workbot/workbot-for-slack-setup.md#2-connect-workbot-to-your-apps)
+3. [Invite Workbot to channels](/workbot/workbot-for-slack-setup.md#3-invite-workbot-to-channels)
 
 ## 1. Add Workbot to Slack
 Add Workbot to your Slack organization [here](https://www.workato.com/workbot-slack). When you add Workbot to your organization, all team members in a channel will be able to view the notifications Workbot posts to that channel, and any team member will be able to interact with Workbot via direct messages.

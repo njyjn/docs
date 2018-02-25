@@ -10,9 +10,9 @@ The Workato on-premise agent provides a secure way for Workato to selectively ac
 
 On-premise access is enabled only for certain plans. Check the [Pricing and Plans page](https://www.workato.com/pricing?audience=general) or reach out to Workato sales representatives at +1 (844) 469-6752 to find out more.
 
-For Workato accounts with on-prem access, users are able to view the on-prem option on their account menu.
+For Workato accounts with on-prem access, users are able to view the on-prem option in the Tools menu.
 
-![On-prem option](/assets/images/on-prem/on_prem_access_option.png)
+![On-prem option](assets/images/on-prem/on_prem_access_option_Jan_2018.png)
 *On premise menu option*
 
 # On-premise overview
@@ -24,12 +24,11 @@ The following is a conceptual model of Workato's on-premise agent and how it int
 Workato on-premise connectivity has 2 core components:
 
 - Tunneling
-
 - Database and filesystem access.
 
 The on-prem agent runs within the customer’s data center, behind the firewall, and establishes a TLS websocket tunnel to connect out to Workato.
 
-The on-prem agent can be configured to access the selected databases and filesystems behind the firewall. Since 2.2.x it also supports connections to JMS-compliant systems.
+The on-prem agent can be configured to access the selected databases and filesystems behind the firewall. Since 2.2.x it also supports connections to [JMS-compliant systems](/connectors/jms.md).
 
 # Supported operating systems
 The on-prem agent runs on the following systems:
@@ -39,6 +38,12 @@ The on-prem agent runs on the following systems:
 - Windows 7, 10 (64-bit)
 
 - Mac OS X
+
+Minimum hardware requirements for the system running the on-prem agent are:
+
+- 8GB of RAM
+- 250 MB of disk space
+- 800 Mhz 64-bit CPU (Intel/AMD).
 
 Please make sure that TCP port 3000 is available for binding.
 
@@ -51,20 +56,49 @@ Please make sure that TCP port 3000 is available for binding.
 3. [Start agent](/on-prem.md#start-agent)
 
 ## Install agent
+### For Windows
+1. On the top navigation bar, click `Tools` > `On-prem agent`
 
-### Windows
+![On-prem option](assets/images/on-prem/on_prem_access_option_Jan_2018.png)
 
-1. Click on `Windows agent` button to download and run the installer. Follow the installation instructions.
-2. By default, the agent is installed into `C:\Program Files\Workato Agent` folder and creates a `Workato` group in the Start Menu.
-3. By default, the agent is installed as a Windows service called `WorkatoAgent`. You can disable this feature by unchecking the corresponding option during install.
-4. Click on `Download key` button. Unzip the `cert.zip` file to `<INSTALL_HOME>\conf` directory (`<INSTALL_HOME>` is a target folder you've selected during install). This should copy `cert.key` and `cert.pem` files to the directory.
+2. Click `Create a new agent`
+
+![On-prem option](assets/images/on-prem/create_agent_Jan_2018.png)
+
+3. Click `Download key` and `Download agent`, which downloads a `cert.zip` file and an agent installer/package file respectively.
+
+![On-prem option](assets/images/on-prem/download_key_agent_Jan_2018.png)
+
+4. Select your operating system to download the right agent installer/package.
+
+![On-prem option](assets/images/on-prem/download_agent_Jan_2018.png)
+
+5. Run the agent installer file. Then follow the installation instructions.
+6. By default, the agent is installed into `C:\Program Files\Workato Agent` folder and creates a `Workato` group in the Start Menu.
+7. By default, the agent is installed as a Windows service called `WorkatoAgent`. You can disable this feature by unchecking the corresponding option during install.
+8. Unzip the `cert.zip` file to `Workato Agent\conf` directory. This should copy the `cert.key` and `cert.pem` files to the directory.
 
 An installation instruction video for Windows is also available [here](https://www.youtube.com/watch?v=Pu3GCk7OY6Q&feature=youtu.be).
 
-### Linux
+### For Linux & Mac OS
+1. On the top navigation bar, click `Tools` > `On-prem agent`
 
-1. Click on `Linux agent` button. Unpack the agent package file to `<INSTALL_HOME>`.
-2. Click on `Download key` button. Unzip the `cert.zip` file to `<INSTALL_HOME>/conf` directory. This should copy `cert.key` and `cert.pem` files to the directory.
+![On-prem option](assets/images/on-prem/on_prem_access_option_Jan_2018.png)
+
+2. Click `Create a new agent`
+
+![On-prem option](assets/images/on-prem/create_agent_Jan_2018.png)
+
+3. Click `Download key` and `Download agent`, which downloads a `cert.zip` file and an agent installer/package file respectively.
+
+![On-prem option](assets/images/on-prem/download_key_agent_Jan_2018.png)
+
+4. Select your operating system to download the right agent installer/package.
+
+![On-prem option](assets/images/on-prem/download_agent_Jan_2018.png)
+
+5. Unpack the agent package file into a folder of your choice, which we will refer to as `<INSTALL_HOME>` folder.
+6. Unzip the `cert.zip` file to `<INSTALL_HOME>/conf` directory. This should copy the `cert.key` and `cert.pem` files to the directory.
 
 ## Create connection profiles
 A single Workato agent can be used to connect with multiple backend apps. A `connection profile` uniquely identifies the back end app and contains the configuration information required to connect to that app.
@@ -98,7 +132,18 @@ Port numbers can be omitted when matching defaults for a given database type.
 
 The example below has a `connection profile` named `marketing`. Do not use spaces or special characters in `connection profile` names.
 
-PostgreSQL URL-based configuration:
+SQL Server URL-based sample configuration for connecting to specific instance:
+
+```YAML
+database:
+  sales:
+    url: jdbc:sqlserver://server\instance;databaseName=sales
+    username: joe
+    password: Secret123
+    ApplicationName: workato
+```
+
+PostgreSQL URL-based sample configuration:
 
 ```YAML
 database:
@@ -157,6 +202,77 @@ For example, if we were to access the on-prem-file folder on the Desktop, the co
 
 The file path can be found when you right-click on the folder, and select **get info** or **property**.
 
+### Apache Kafka
+Kafka connection profiles are located in the `kafka` section of `<INSTALL_HOME>/conf/config.yml`.
+You need the following configuration properties when connecting to Kafka:
+```YAML
+kafka:
+  MyKafkaProfile:
+    ... connection properties ...
+```
+
+You can provide any Kafka [consumer](https://kafka.apache.org/documentation/#producerconfigs) or [producer](https://kafka.apache.org/documentation/#newconsumerconfigs) configuration properties, e.g. `bootstrap.servers` or `batch_size`.
+
+However, some properties are overriden by Workato Agent and cannot be configured. You will get a warning when trying to redefine a protected property. Some examples of these protected properties:
+
+| Property name | Comment |
+|------------------|-------------------------------------------|
+| key.serializer | Only StringSerializer is supported by agent |
+| value.serializer | Only StringSerializer is supported by agent |
+| key.deserializer | Only StringSerializer is supported by agent |
+| value.deserializer | Only StringSerializer is supported by agent |
+| auto.offset.reset | Defined by recipes |
+| enable.auto.commit | Defined internally |
+
+Workato Agent also supports the following (non-Kafka) configuration properties:
+
+| Property name | Description |
+|------------------|-------------------------------------------|
+| timeout | General operation timeout, milliseconds. |
+| url | Comma-separated list of server URLs where protocol is either `kafka` or `kafka+ssl`. |
+| ssl.truststore | Allows inlining of PEM-encoded truststore for secure connection to Kafka |
+| ssl.keystore.key | Allows inlining of private key for secure connection to Kafka |
+| ssl.keystore.cert | Allows inlining of client certificate for secure connection to Kafka |
+
+`ssl.*` options above can be used when connecting to Kafka using SSL/TLS and allows you to keep PEM-encoded certificates and private keys inside the `config.yml` file. Any YAML-compatible multiline syntax could be used, for instance:
+
+```YAML
+kafka:
+  MyKafkaProfile:
+    ssl.truststore:
+    |
+      -----BEGIN CERTIFICATE-----
+      502mPNNAYkY4a7Zu84DLCXLFurEa4BhLBqLkzC6WdTrBN9z6Rp/svTIl6VgjSTP6
+      .....
+      -----END CERTIFICATE-----
+```
+
+Note that password-protected private keys cannot be inlined.
+
+### Password encryption
+
+To avoid exposure of any sensitive data (like passwords or private keys) you have a choice to encrypt it by using the encryptor tool. The process of encrypting any secret value is as follows:
+
+- Make sure you have your agent keys properly downloaded and placed into `conf` folder. They are required for encryption.
+- Run the encryptor tool. Use `bin\encryptor.cmd` in Windows, `bin/encryptor.sh` script for Unix/MacOS.
+- When prompted, enter your secret value twice.
+- The script will print an encrypted text.
+  Example:
+  ```
+  {encrypted: 'RCVtuGPjJWNqwkFQvhT...'}
+  ```
+- Copy and paste the provided text as a value inside `config.yml`. Make sure your value is one-line.
+  For example, in a database profile:
+  ```YAML
+  database:
+    sales:
+      url: jdbc:postgresql://sales.database:5432/sales
+      username: joe
+      password: {encrypted: 'RCVtuGPjJWNqwkFQvhT...'}
+  ```
+
+The encryption is based on your agent's private key. You cannot use encrypted value from one agent inside another agent's configuration. Note that only YAML values can be encrypted (you cannot encrypt YAML property keys).
+
 ### Proxy server support
 
 The on-prem agent can be run in the environment with limited internet connectivity by using a proxy server.
@@ -174,6 +290,19 @@ proxy:
 
 Using a proxy server for establishing a secure tunnel requires a support for [CONNECT](https://en.wikipedia.org/wiki/HTTP_tunnel#HTTP_CONNECT_tunneling) feature; make sure the proxy server is configured to allow `CONNECT` requests to the Workato gateway (`sg.workato.com`).
 
+### Accessing HTTPS resources
+
+`http` configuration section allows configuring agent access to internal HTTPS resources:
+```YAML
+http:
+  trustAll: true
+  verifyHost: true
+```
+
+The agent may be configured to allow accessing internal HTTPS resources which use self-signed certificates. To enable self-signed certificates set `trustAll` property to `true`.
+
+Normally a server certificate's Common Name (or Subject Alternate Name) field should match the target hostname. If you want the agent to accept server certificates with non-matching hostname, disable hostname verification by setting `verifyHost` property to `false` (defaults to `true`).
+
 ### Applying new configuration
 
 A running on-prem agent automatically applies any changes made to the configuration file. Changes to proxy server settings require you to restart the agent.
@@ -189,17 +318,6 @@ You can use `Run Agent (console)` shortcut to ensure the agent is successfully c
 #### Using Windows Service
 * Installer automatically registers the agent as a Windows service called `WorkatoAgent`.
 * Note: Workato agent is not auto-started by default. Open **Control Panel &rarr; System and Security &rarr; Administrative Tools &rarr; Services &rarr; WorkatoAgent** service configuration to configure service auto-start.
-
-### Upgrading 
-* To upgrade your on-premise agent, you can download a new installer and install over your current agent - your on-premise agent will be updated.
-* The config.yml file and the certificate files (`cert.key`, `cert.pem`) will remain unchanged in the conf directory
-* Navigate to the On-Prem page and select an agent. Download the new installer based on your operating system (either Windows or Linux) and run it.
-* Set the location of the new agent to be the location of your old on-premise agent (`<INSTALL_HOME>`). Finish the installation.
-
-#### Uninstalling
-* Use `Workato` &rarr; `Uninstall` shortcut to uninstall.
-* The service will shutdown automatically before uninstall.
-* Uninstalling the agent does not remove any configuration files that you've created or modified.
 
 #### Browsing log files
 * When the on-prem agent is running as a Windows service, log files can be found at: `%SYSTEMROOT%\System32\LogFiles\Workato`. There's also a shortcut to Workato log directory in the `Workato` group found in Start Menu for convenience.
@@ -234,6 +352,25 @@ If connecting to on-prem databases fail, check that:
 - Selected agent is active
 - Credentials provided in the connection profile are correct
 - Database name and type provided in the connection profile is correct
+
+## Upgrading to the new version
+Follow the instructions below for upgrading an existing agent:
+
+### Windows
+- Download the installer
+- Verify that the agent is stopped (either stop **Workato Agent** Windows service or terminate console-based agent)
+- Uninstall the agent (e.g.  **Start Menu &rarr; Workato &rarr; Uninstall**). This should not change the `config.yml` file and the certificate files (`cert.key`, `cert.pem`) in the conf directory
+- Run the downloaded installer (this will automatically install to the same location)
+- Run the agent. Depending on the setup, either start **Workato Agent** Windows service or run console-based agent
+- Make sure your agent is active and verify its version number on the agent page (**Workato.com &rarr; Tools &rarr; On-prem agent**)
+
+### Linux/MacOS
+- Verify that the agent process is stopped. The upgrade will fail if any running agents are detected.
+- Run the upgrade script: `bin/upgrade.sh`. Make sure you have enough permissions.
+- Follow the instructions provided by the upgrade script. Confirm the upgrade when prompted.
+- Upon successful completion of the upgrade, run the agent (e.g. `bin/run.sh`)
+- Make sure your agent is active and verify its version number on the agent page (**Workato.com &rarr; Tools &rarr; On-prem agent**).
+- Upgrade process is not triggered if no new versions are available. However, it might be necessary to repair a broken installation, in that case use the command line option when running the upgrade: `bin/upgrade.sh --enforce`.
 
 ## Example recipes
 

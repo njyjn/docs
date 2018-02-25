@@ -14,7 +14,7 @@ You can also retrieve information from your apps and post it to Slack, or create
 
 By default, Workbot comes with a set of pre-built recipes that allows you to interact with your applications and enable notifications with minimal setup.
 
-## Slack VS Workbot for Slack connectors
+## Slack connector VS Workbot for Slack connector
 Workato supports both the Slack connector and the Workbot for Slack connector.
 
 The Slack connector allows you to authorize to your Slack team as a team member, and immediately post messages onto channels, send direct messages to Slack team members, and manage channels and groups. It does not require any app installation onto your Slack team. Recipes built on the Slack connector allows you to respond to message buttons and menus.

@@ -4,76 +4,79 @@ date: 2017-02-16 06:15:00 Z
 ---
 
 # QuickBooks Online
+[QuickBooks Online](https://quickbooks.intuit.com/) is an easy-to-use accounting software package that enables businesses to manage business payments, bills, and payroll functions.
 
-## Connector information
+## API version
+The QuickBooks Online connector uses the [V3 REST API](https://developer.intuit.com/docs/api/accounting).
 
-### API version
-
-
-### Supported editions and versions
+## Supported editions and versions
 The QuickBooks connector works with all versions of **QuickBooks Online-** QuickBooks Self-Employed, QuickBooks Simple Start, QuickBooks Essentials, as well as QuickBooks Plus.
 
-Workato currently does not support QuickBooks Desktop/Enterprise versions. 
+Workato currently does not support QuickBooks Desktop/Enterprise versions.
 
 ## How to connect to QuickBooks on Workato
+QuickBooks Online supports OAuth1. Clicking on **Connect** would create a popup window to QuickBooks that prompts for you to provide your QuickBooks Online credentials to QuickBooks.
 
-### QuickBooks connection 
-![QBO connect1](/assets/images/QBO connect1.JPG)
+![QBO connect2](/assets/images/connectors/quickbooks/qbo-connect1.JPG)
+*Click on connect to start the QuickBooks Online authorization flow*
 
-* **Connection name**
+Once authenticated, you would need to authorize Workato to read and write to your QuickBooks account.
 
-  Give this QuickBooks Connection a unique name which identifies the QuickBooks account you are connected to and click 'Connect'. A pop-up will appear.
-  
-  ![QBO connect2](/assets/images/QBO connect2.JPG)
-  
+![QBO connect2](/assets/images/connectors/quickbooks/qbo-connect2.JPG)
+*Popup to QuickBooks Online will be generated to prompt you for credentials*
+
+- Connection name
+
+Give this QuickBooks connection a unique name which identifies the QuickBooks account you are connected to and click **Connect**. A pop-up will be generated.
+
 * **Username & Password**
 
-  Login with your QuickBooks credentials and allow Workato to access your QuickBooks account. 
+Login with your QuickBooks credentials and allow Workato to access your QuickBooks account.
 
 ## Connecting to Multiple Companies on QuickBooks
 If you have multiple Companies on your QuickBooks account, you can connect them to Workato using the same QuickBooks authentication. Simply create new connections for each Company.
 
-However, if you have multiple Workato accounts and try to connect to the same Company, the earlier connection will be disconnected. Hence, we recommend that only 1 Workato account is used to connect to 1 Company to prevent any disruption to your recipes. 
+However, if you have multiple Workato accounts and try to connect to the same Company, the earlier connection will be disconnected. Hence, we recommend that only 1 Workato account is used to connect to 1 Company to prevent any disruption to your recipes.
 
-## QuickBooks Triggers
-The following triggers are currently available for the QuickBooks Connector: 
+## QuickBooks triggers
+The following triggers are currently available for the QuickBooks connector:
 
 **NEW:** Account, Bank Deposit, Bill Payment, Credit Note, Customer, Employee, Estimate, Invoice, Item, Payment, Sales Receipt, Vendor
 
 **NEW/UPDATED:** Account, Tax Code, Tax Rate
 
-**UPDATED:** Bill, Credit Note, Customer, Employee, Estimate, Invoice, Item, Purchase, Vendor 
+**UPDATED:** Bill, Credit Note, Customer, Employee, Estimate, Invoice, Item, Purchase, Vendor
 
-If you wish to submit a request for a new Trigger not currently available, please visit: 
+If you wish to submit a request for a new Trigger not currently available, please visit:
 
 ## Action: Add Line to Invoice
 ### Sales Item Detail vs. Discount Line Detail vs. Description only
 
 ##### Sales Item Detail
-As the name suggests, user is required to key in some of the details regarding the sales item. This includes Item ID, Total Amount, Unit Price/Quantity and also the Description. 
+As the name suggests, user is required to key in some of the details regarding the sales item. This includes Item ID, Total Amount, Unit Price/Quantity and also the Description.
 
 ##### Discount Line Detail
 
 ##### Description Only
-When user wants to include only the description of the items, he/she would choose this option.  
+When user wants to include only the description of the items, he/she would choose this option.
 As such, "Description only" is a subset of "Sales Item Detail", if the user wants to include more details in the invoice, he/she should choose "Sales Item Detail".
 
 ### Difference between Create with 1 line item and Create with Line items
 
 #### Creating Transactional Objects with line items
-Workato QuickBooks actions for creating Transactional objects (Invoice, Sales receipt, Bill, Credit Memo, etc) generally has two ways for populating them : 
+Workato QuickBooks actions for creating Transactional objects (Invoice, Sales receipt, Bill, Credit Memo, etc) generally has two ways for populating them:
 
 1) Creating first an invoice with a single line item (as mandatory by QuickBooks Online to have at least one line item), and use Add Line Item to X action for any further addition
 
-or 
+or
 
 2) Creating an invoice with line items. The line items detail will be pulled dynamically from a list data pill. You can learn more about it here.
 
-**When do I use 'Create with 1 line item'?** 
+**When do I use 'Create with 1 line item'?**
 
 Creating a single invoice with only line items are great for Single sync ups, where details of the transactional items are minimal. Example of this is creating an invoice for an opportunity, or creating a Sales Receipt for donations. Subsequently, adding on line items to an invoice can be done in another recipe when new items are added for an existing invoice, giving you the flexibility of structuring your invoices.
 
-In all other cases, you should use 'Create with line items' and simply place the list of items where required. 
+In all other cases, you should use 'Create with line items' and simply place the list of items where required.
 
 ![QBO mulltiline](/assets/images/QBO_docs/QBO mulltiline.png)
 
@@ -81,13 +84,13 @@ A 'list' type pill is marked with the list logo as can be seen above in red.
 
 ## Bank Deposit
 
-Workato has several QuickBooks actions that are related to a Bank Deposit object : 
-  
+Workato has several QuickBooks actions that are related to a Bank Deposit object:
+
   * Create bank deposits
   * Search bank deposits
   * Update bank deposits
 
-The available fields for a Bank Deposits are : 
+The available fields for a Bank Deposits are:
 
 * Txn Date
   * Date of the transaction object
@@ -119,7 +122,7 @@ The available fields for a Bank Deposits are :
     * For each of the line items, specify its Amount
 
 * Linked Transaction
-  * If there are existing transactions that needs to be related, specify details here to record a deposit for an existing transaction. 
+  * If there are existing transactions that needs to be related, specify details here to record a deposit for an existing transaction.
   * Linked transaction source list
     * Specify a line item object here where data will be accessed from. The total number of line item created will equals to the size of the source list. To learn more about source list, see here
   * Transaction ID
@@ -156,7 +159,7 @@ The available fields for a Bank Deposits are :
 
 ## Exchange Rate
 
-QuickBooks Online provides international trades to be done in multiple currencies. 
+QuickBooks Online provides international trades to be done in multiple currencies.
 Workato adapts your business needs and supports all necessary changes needed to automate your business.
 
 QuickBooks Online allows you to support multiple currencies. To do so, you may enable it in your Accounts and Settings section. Do note that enabling multiple currency may incur setting changes. Please do seek consultation with QuickBooks Online support.
@@ -184,14 +187,14 @@ If you are using the non-profit version of QuickBooks, do note that on Workato, 
 | Sales Receipt  | Donations (Sales) |
 | Expenses | Expenditure |
 | Profit & Loss | Statement of Activity |
-| Balance Sheet | Statement of Financial Positions | 
+| Balance Sheet | Statement of Financial Positions |
 
 For more info on non-profit organization in QuickBooks, you can click [here](https://community.intuit.com/articles/1145585-quickbooks-online-for-nonprofits).
 
 ## Common Errors & Troubleshooting
 
 ### Duplicate Name Exists
-In Quickbooks, the display name is used as a unique identifier across Customer (also known as Donor, Tenants etc.), Employee and Vendor. 
+In Quickbooks, the display name is used as a unique identifier across Customer (also known as Donor, Tenants etc.), Employee and Vendor.
 
 As such, trying to add another record with the same display name which already exist in any of the three types will give you an error: Another tenant, vendor or employee is already using this name. Please use a different name.
 
@@ -231,11 +234,11 @@ Here is a list of accepted characters:
 
 Error 6210: Account period closed, cannot update through API
 
-This error means that in QuickBooks you have set a closing date, and it will not let you create/update transactions within that period. To remedy it, you have to take out the closed date. 
+This error means that in QuickBooks you have set a closing date, and it will not let you create/update transactions within that period. To remedy it, you have to take out the closed date.
 
-Refer to this article below to see how. 
+Refer to this article below to see how.
 https://support.quickbooks.intuit.com/support/Articles/HOW12993
- 
+
 ### Malformed Website Address format
 
 QuickBooks fault: {"Error"=>[{"Message"=>"Malformed Web Site Address format", "Detail"=>"Web Site URL does not have correct format. Supplied value:example.com", "code"=>"2200", "element"=>"WebAddr"}], "type"=>"ValidationFault"}
@@ -258,11 +261,11 @@ What does this mean : This usually happens when you tried to get an object based
 
 The recipe tries to get the item from QuickBooks based on the ID, unfortunately that object does not exist in your Quickbooks account. You would want to check again in your QuickBooks.
 
-You can find the ID of your object in the URL. It would usually shown up with an ID=6 where 6 is the ID of your object. 
+You can find the ID of your object in the URL. It would usually shown up with an ID=6 where 6 is the ID of your object.
 
 ![QBO errorobjnotfound2](/assets/images/QBO_docs/QBO errorobjnotfound2.png)
 
-You can always re-run the job again once it has been ensured, or you may have to change your recipe to make sure that the workflow is correct. 
+You can always re-run the job again once it has been ensured, or you may have to change your recipe to make sure that the workflow is correct.
 
 ### 784 QuickBooks API not responding
 
@@ -277,7 +280,3 @@ This error could mean that there were some connectivity issues with the app conn
 Disconnect your app by going to the connections tab at the bottom of your recipe page, and reconnect it again.
 
 ![QBO connect3](/assets/images/QBO_docs/QBO connect3.png)
-
-
-
-

@@ -15,7 +15,7 @@ In many cases recipes will require a valid app connection before triggers and ac
 
 A connection is created when a user authenticates with the app via Workato, and gives Workato permission to access the data. Each connection should correspond to one app instance, hence multiple recipes can and should utilize the same connection if working with the same app instance.
 
-# Authentication
+## Authentication
 Authentication (or authorization) usually occurs in the following standard ways, although there are some apps with custom authentication flows.
 - OAuth2
 - OAuth1 (and variations)
@@ -26,7 +26,7 @@ In each of the highlighted authentication flows, an app user has to authorize Wo
 
 For more information on connecting to a specific app, refer to the specific app connector documentation.
 
-## Example: Authentication flow for Salesforce
+### Example: Authentication flow for Salesforce
 The following recipe requires both Salesforce and a Zendesk connections, which are both OAuth2. The **Connection** tab within the recipe shows further details about the app connections.
 
 ![Example recipe](/assets/images/recipes/connections/example-recipe.png)
@@ -47,7 +47,7 @@ After providing credentials, Salesforce will show up as connected. Now the recip
 ![Connected Salesforce](/assets/images/recipes/connections/connected-salesforce.png)
 *Recipe with Salesforce and Zendesk connections established*
 
-# Integration user
+## Integration user
 Workato recipes typically automate workflows for a company or a department on behalf of many users. i.e. the integrations will work no matter who created an invoice or a ticket. This requires that the connection used has broader permission that spans multiple users. As a result, the connected user is typically a special integration user created just for integration purposes.
 
 For example:
@@ -56,7 +56,7 @@ For example:
 
 Apps have different granularity when it comes to defining user roles and permissions. Refer to the specific connector documentation ![here](/connectors.md) for more information on required permissions to connect to the app.
 
-# Using connections
+## Using connections
 Typically a company may only have a single instance of an app and they may have another instance a sandbox for testing, etc. So a user would need just one connection for multiple recipes that work with the same app instance.
 
 In cases whereby there are more than one app instance to connect to, e.g. when working with sandboxes and production organizations or teams, multiple connections should be created, with each connection authenticated with each separate instance.
@@ -74,3 +74,14 @@ The recipe requires two separate Salesforce connections.
 *Primary and secondary Salesforce connections*
 
 Refer to the [secondary connectors article](/features/secondary-connectors.md) to find out more.
+
+## App connection errors
+On occasions, app connections can become invalid due to several reasons:
+- app credentials were changed and the connection was not updated correspondingly in Workato
+- connected user doesn't have the right set of permissions to read/write selected records
+- permissions of the connected user was changed to a reduced scope
+
+In such cases, reconnecting or verifying that the connected user has permissions to read/write records used in the recipes should successfully re-establish the connection.
+
+![Design-time errors for app connection errors](/assets/images/troubleshooting/connection-error.png)
+*Design-time errors for app connection errors*

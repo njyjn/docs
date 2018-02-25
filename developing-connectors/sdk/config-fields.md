@@ -51,3 +51,6 @@ object_definition: {
 ```
 
 While the config_fields is empty, document objects will have no fields (empty array of fields). As soon as config_fields is given a value, a request is made to retrieve the fields present in this document. From a recipe user perspective, the action will appear initially as a single input with a list of documents. After selecting a document, the corresponding set of fields will be generated, to be used in the recipe.
+
+![config_fields schema screenshot](/assets/images/sdk/config_fields_demo.gif)
+ *Configuration fields in action*

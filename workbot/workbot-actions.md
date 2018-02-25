@@ -7,9 +7,9 @@ date: 2017-03-30 05:00:00 Z
 Workbot actions allow Workbot to post notifications into a specified channel when there are events to take note of, or respond to a command.
 
 Workbot supports 3 actions:
-* Post command reply
-* Post notifications
-* Download attachment
+* [Post command reply](#post-command-reply)
+* [Post notifications](#post-notifications)
+* [Download attachment](#download-attachment)
 
 ## Post command reply
 Post command reply allows you to customize how Workbot replies when an event is completed. This reply can be a simple message about the task completion, or a prompt for the user to take a subsequent action once the first has been done, e.g. after retrieving data for a custom account in Salesforce, ask if the user wishes to copy that information across to another application.

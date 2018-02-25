@@ -3,10 +3,10 @@ title: Recipe Ops
 date: 2017-03-02 02:00:00 Z
 ---
 
-# Workato admin connector
-The Workato admin connector enables building of recipes to monitor and manage active recipes.
+# RecipeOps by Workato
+The RecipeOps connector enables building of recipes to monitor and manage active recipes.
 
-Stopped recipes and failed jobs can have automated responses and notifications to mitigate their impact on critical business processes. Account, recipe and job details can also be retrieved via the Workato admin connector.
+Stopped recipes and failed jobs can have automated responses and notifications to mitigate their impact on critical business processes. Account, recipe and job details can also be retrieved via the RecipeOps connector.
 
 ## Example scenarios
 - Notify designated team members when a key recipe is stopped - notification via Gmail, SMS, Twilio phone call or IVR, Slack, etc.
@@ -24,8 +24,8 @@ When establishing the connection, select from **My account** or **Someone else's
 
 The following shows the different fields required for the available connection options.
 
-![Establish Workato Admin connection](/assets/images/recipe-ops/establish-workato-admin-connection.gif)
-*Establishing Workato Admin connection*
+![Establish RecipeOps connection](/assets/images/recipe-ops/establish-workato-admin-connection.gif)
+*Establishing RecipeOps connection*
 
 The managed user has to retrieve the API key from their **Account settings > API key**.
 

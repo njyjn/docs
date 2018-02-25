@@ -20,7 +20,7 @@ For example:
 
 ## The add (+) operator
 
-This operator allows the addition of operands on either side.
+This operator allows the addition of operands on either side. This section talks about number arithmetics. Date arithmetics is possible as well and can be found [here](/formulas/date-formulas.md#date-arithmetics).
 
 ### Example
 | Example     | Result | Type   |
@@ -33,7 +33,7 @@ This operator allows the addition of operands on either side.
 
 ## The subtract (-) operator
 
-This operator subtracts the right hand operand from the left hand operand.
+This operator subtracts the right hand operand from the left hand operand. This section talks about number arithmetics. Date arithmetics is possible as well and can be found [here](/formulas/date-formulas.md#date-arithmetics).
 
 ### Example
 | Example     | Result | Type   |

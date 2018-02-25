@@ -79,8 +79,10 @@ object_definitions: {
               <ul>
                 <li><code>:string</code></li>
                 <li><code>:integer</code></li>
-                <li><code>:datetime</code></li>
+                <li><code>:number</code></li>
+                <li><code>:date_time</code></li>
                 <li><code>:date</code></li>
+                <li><code>:timestamp</code></li>
                 <li><code>:boolean</code></li>
                 <li><code>:object</code> Must be accompanied with <code>:properties</code></li>
                 <li><code>:array</code> Must be accompanied with <code>:properties</code></li>
@@ -97,10 +99,12 @@ object_definitions: {
                 <li><code>:number</code></li>
                 <li><code>:url</code></li>
                 <li><code>:select</code> Make sure to include the <code>:pick_list</code> property.</li>
-                <li><code>:timestamp</code></li>
+                <li><code>:date_time</code></li>
                 <li><code>:checkbox</code></li>
+                <li><code>:currency</code></li>
                 <li><code>:phone</code></li>
                 <li><code>:email</code></li>
+                <li><code>:subdomain</code>Typically used in connection fields. Make sure to include the <code>:url</code> property.</li>
               <ul>              
             </td>
         </tr>

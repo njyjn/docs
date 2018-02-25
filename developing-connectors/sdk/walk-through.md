@@ -4,7 +4,7 @@ This chapter provides a step-by-step walk through of building your own custom co
 
 ## Making requests
 
-The custom connector framework supports building connectors to applications that offer an API reachable over HTTP/HTTPS.  The common request/response formats are supported: JSON (default), XML, and `www-form-urlencoded`.
+The custom connector framework supports building connectors to applications that offer an API reachable over HTTP/HTTPS.  The common request/response formats are supported: JSON (default), XML, `www-form-urlencoded` and `multipart`.
 
 In parts of the connector that need to make requests, the HTTP verbs (GET, POST etc) are supported as ruby methods.  Let's use an example of an API that uses simple token-based authentication passed as a URL parameter, and returns customer records wrapped in a superfluous `customer` JSON object that we want the connector to peel off as it's not useful to recipe authors using it:
 
@@ -83,7 +83,7 @@ params(id: 1234, api_token: 'xyz')
 
   - Methods to change the request/response (or both) formats from the JSON default:
 
-    `request_format_json`, `response_format_json`, `format_json`, `request_format_xml`, `response_format_xml`, `format_xml`, `request_format_www_form_urlencoded`
+    `request_format_json`, `response_format_json`, `format_json`, `request_format_xml`, `response_format_xml`, `format_xml`, `request_format_www_form_urlencoded`, `request_format_multipart_form`
 
   - HTTP authentication
 

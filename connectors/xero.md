@@ -1,3 +1,8 @@
+---
+title: Workato connectors - Xero
+date: 2017-05-06 16:00:00 Z
+---
+
 # Xero
 [Xero](https://www.xero.com/us/) is a cloud-based accounting software for small to medium businesses, used to manage invoicing, bank reconciliation, bookkeeping and more.
 
@@ -6,7 +11,7 @@ Workato allows you to synchronize data between Xero and the other apps you use i
 ## Supported triggers and actions
 The latest triggers and actions can be found on the [Xero connector page](https://www.workato.com/integrations/xero).
 
-## Sales tax type when using create/update items action in Xero 
+## Sales tax type when using create/update items action in Xero
 To find out what types of sales tax to key in when using the **Create/update items** action in Xero, users can click on the URL below the box (highlighted in image).
 
 ![Sales tax list](/assets/images/connectors/xero/sales-tax-list.png)
@@ -30,7 +35,7 @@ IDs can be found in one of two ways. The first way is less common when it comes 
 The second, more common way is to use the **Search**, **Create**, or **Update** actions. Whenever Workato interacts with a record in Xero, it will receive in the API response the ID of the record. In your next action, you can use the datapill from the Xero datatree for the ID returned by the preceding action to specify what record Workato should interact with in this step. Some examples are given below.
 
 #### Contact ID
-**Contact ID** is an unique identifier for each contact in the Xero. It can be found at the end of the URL of a particular contact page. 
+**Contact ID** is an unique identifier for each contact in the Xero. It can be found at the end of the URL of a particular contact page.
 
 ![Contact ID](/assets/images/connectors/xero/contact-id.png)
 ***Contact ID** in the contact page URL*
@@ -66,7 +71,7 @@ You can make use of the output datapill from the following actions to obtain **P
 ![Payment](/assets/images/connectors/xero/payment.png)
 ***Payment ID***
 
-#### Employee ID 
+#### Employee ID
 You can make use of the output datapill from the following triggers/actions to obtain **Employee ID**, depending on your workflow:
 
 1. **New/updated employee**

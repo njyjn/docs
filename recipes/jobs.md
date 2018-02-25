@@ -54,7 +54,7 @@ Pending indicates that the job is still being processed.
 Aborted is a rare state that a job can get into if it has pending jobs and the recipe has been affected in a manner that these pending jobs cannot finish processing.
 
 # Job details
-From the jobs report, you can view detailed information about each job as well as step-level information. This is useful in several ways:
+From the job details screen, you can view detailed information about each job as well as step-level information. This is useful in several ways:
 
 - Debugging your recipe
 
@@ -69,7 +69,6 @@ To view job details, simply click on the job you are interested in seeing. This 
 ![Getting to job details page](/assets/images/job-details/clicking-through-to-job-details.gif)
 *Getting to job details page*
 
-# Job details
 The job details page shows the input data and output data of each step in the recipe, allowing you to inspect the job and debug it if needed.
 
 ![Job details page](/assets/images/job-details/job-details-overview.png)

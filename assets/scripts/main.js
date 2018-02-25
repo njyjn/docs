@@ -35,7 +35,7 @@ require(['gitbook', 'jquery'], function (gitbook, $) {
   function updatePageScroll() {
     var scrollToElem = $(document.getElementById(location.hash.slice(1)));
     var scrollTop = scrollToElem.length ? scrollToElem.position().top : 0;
-    $('body').scrollTop(scrollTop);
+    $('.body-inner').scrollTop(scrollTop);
   }
 
   function updateToolbarButtons() {

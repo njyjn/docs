@@ -6,8 +6,8 @@ date: 2017-03-30 05:00:00 Z
 # Using Workbot for Slack
 In this article, we cover the two ways you can use Workbot in your Slack organization:
 
-1. Carry out Workbot commands
-2. Setup smart notifications (optional)
+1. [Carry out Workbot commands](/workbot/using-workbot-for-slack.md#1-carry-out-workbot-commands)
+2. [Setup smart notifications (optional)](/workbot/using-workbot-for-slack.md#2-set-up-smart-notifications)
 
 ## 1. Carry out Workbot commands
 

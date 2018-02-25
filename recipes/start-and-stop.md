@@ -10,27 +10,36 @@ In Workato, you can work with recipes in various ways:
 - stop a recipe to have it stop processing new trigger events
 
 # Test mode
-It is best practice to test your recipe before starting it and letting it run with minimal supervision. You don't want to turn on an inaccurate automation that moves lots of data wrongly - that probably results in a lot of cleanup work to do!
+It is best practice to test your recipe before starting it and letting it run with minimal supervision. You don't want to turn on an inaccurate automation that moves and processes data wrong - that probably requires a lot of cleanup!
 
-The test recipe button picks up a single trigger event and runs it through your recipe. This allows you to check for recipe correctness. Typically, the test button show up by default for a new recipe, while the start button can be found in the dropdown list. Once your recipe has a first successful job, the default button changes to the start button, while the test button can then be found in the dropdown list.
+The test recipe button picks up a single trigger event and runs it through your recipe to create a job. This lets you review the [job details](/recipes/jobs.md#job-details) to check for recipe correctness.
 
 ![Default test button](/assets/images/startstop/default-test-button.gif)
 *Test button showing up on default for a recipe with no successful jobs*
 
 ## Test trigger events
-The trigger event picked up when you click on test depends on the **Since/From** date selected. In short, your recipe picks up the same trigger events as it would have if you clicked on recipe start. The only difference is that the recipe controls the number of trigger events processed - in this case, one.
+The trigger event picked up when you click on test depends on the [**Since/From** date](/recipes/triggers.md#sincefrom) selected. In the following example, clicking on test will have the recipe look for Salesforce accounts created or updated after 1 January 2017, midnight. If the recipe test mode finds Salesfoce accounts matching that criteria, it proceeds to processes the first trigger event in the queue. As trigger events are processed in chronological order, the account created or updated earliest (closest to 1 January 2017, midnight) will be processed.
 
-The **Since/From** date cannot be changed once you have selected it. Learn more about the **Since/From** date [here](triggers.md#sincefrom).
+![No jobs when testing](/assets/images/startstop/test-recipe-since-date.png)
+*Recipe test mode looks for Salesforce accounts created or updated after 1 January 2017, midnight, and processes the earliest trigger event in the list of accounts found matching this criteria*
 
-If the test mode found jobs, it picks up and processes the first one.
+Remember, the **Since/From** date cannot be changed once you have tested/started the recipe!
 
-![Test recipe and picked up one job](/assets/images/startstop/test-one-job.gif)
-*Test recipe and picked up one job*
-
-If the test mode did not find any jobs, it returns the follwoing message.
+If the test mode did not find any jobs, it returns the following message.
 
 ![No jobs when testing](/assets/images/startstop/test-found-no-jobs.gif)
-*Test recipe picked up no jobs*
+*Test mode did not find a new or updated account in Salesforce (trigger event), and hence created no jobs*
+
+In our example, it means that there are no Salesforce accounts created or updated after 1 January 2017, midnight. In this case, there are a couple of things we can do:
+
+1. Create or update a Salesforce account to create a trigger event, then click on test again. The recipe should pick up this trigger event as it fits the criteria of an account that has been created or updated since 1 January 2017, midnight.
+
+2. Make a copy of the recipe, and change the since date to an earlier date where you know there will be trigger events. For example, if I know that I have a Salesforce account created on 31 December 2016, 10.30pm, I can set the copied recipe's since date to earlier than 31 December 2017, 10.30pm, to guarantee that I have at least 1 trigger event to pick up.
+
+If the test mode found trigger events, it picks up and processes the first trigger event. As trigger events are processed in chronological order, the earliest event will be processed. If you click on test again, it will process the next trigger event in chronological order, and so on. 
+
+![Test recipe and picked up one job](/assets/images/startstop/test-one-job.gif)
+*Test mode found a new or updated account in Salesforce (trigger event) and created a job*
 
 # Testing tips
 

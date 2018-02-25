@@ -92,3 +92,5 @@ puts | ruby version of console.log/stdout, not the same as put
 while | [while loop statement](https://www.tutorialspoint.com/ruby/ruby_loops.htm)
 
 (This list can and will be expanded constantly, feel free to [contact us](mailto:support@workato.com) to update/add to this list)
+
+Workato also supports custom reusable methods. See [Reusable Methods](reusable-methods.md) for more information.

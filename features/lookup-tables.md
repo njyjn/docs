@@ -89,6 +89,15 @@ To use the formula, set the input field to formula mode, and enter the formula i
 
 lookup(`table name`,`column name for search`: `data pill`)[`column name for result`]
 
+### Performing lookup on in memory table
+
+Output of search entries can be used as in memory lookup table. In memory lookup function is useful when a recipe invokes the `lookup` function on the same lookup table 1000s of times. 
+
+To use the lookup formula on a in memory table, set the input field to formula mode, and enter the formula in this format:
+
+lookup(`entries pill from search entries action`,`column name for search`: `data pill`)[`column name for result`]
+
+
 ![lookup formula](/assets/images/features/lookup-tables/lookup-formula.gif)
 *Using the lookup table formula to lookup entries in table Test*
 

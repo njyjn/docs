@@ -14,13 +14,9 @@ In the examples below, we will look at some of the methods that can be used to m
 
 ---
 
-
-
 # Conditionals
 
 This section will cover formulas which allow you to apply conditions (if-else) to your strings. Find out more about how to use conditionals [here](http://docs.workato.com/formulas.html#conditionals)
-
-
 
 ---
 
@@ -35,8 +31,6 @@ This function checks the input string and returns true if it is an empty string 
 | `" ".blank?`          | true   |
 | `nil.blank?`          | true   |
 
-
-
 ---
 
 ## present?
@@ -50,8 +44,6 @@ This function will check the input, returning true if there is a value present. 
 | `nil.present?`          | false  |
 | `"Jean Marie".present?` | true   |
 
-
-
 ---
 
 ## presence
@@ -64,8 +56,6 @@ This function will check the input, returning its value if there is one present,
 | `" ".presence`          | nil        |
 | `nil.presence`          | nil        |
 | `"Jean Marie".presence` | Jean Marie |
-
-
 
 ---
 
@@ -82,8 +72,6 @@ This function checks the input string and returns true if it contains the stated
 | `"Jean Marie".include?("ma")`          | false  |
 | `"Jean Marie".downcase.include?("ma")` | true   |
 
-
-
 ---
 
 ## exclude?
@@ -99,8 +87,6 @@ This function acts in an opposite manner from include?. It will return true only
 | `"Jean Marie".exclude?("ma")`          | true   |
 | `"Jean Marie".downcase.exclude?("ma")` | false  |
 
-
-
 ---
 
 ## match?
@@ -115,8 +101,6 @@ This function checks the input string for a particular pattern. It returns true 
 | `"Jean Marie".downcase.match?(/marie/)` | true   |
 | `"Jean Marie".match?(/\s/)`             | true   |
 
-
-
 ---
 
 ## ends_with?
@@ -129,8 +113,6 @@ This function checks the input string on whether it finishes with the stated key
 | `"Jean Marie".ends_with?("ie")`        | true   |
 | `"Jean Marie".ends_with?("IE")`        | false  |
 | `"Jean Marie".upcase.ends_with?("IE")` | true   |
-
-
 
 ---
 
@@ -145,11 +127,7 @@ This function checks the input string on whether it begins with the stated keywo
 | `"Jean Marie".starts_with?("jean")`      | false  |
 | `"Jean Marie".upcase.starts_with?("JEAN")` | true   |
 
-
-
 ---
-
-
 
 # Text manipulation
 
@@ -167,8 +145,6 @@ Replaces special characters in a string. Used when app does not accept non-stand
 | --------------------------- | ------------ |
 | `"Jeân Mârie".parameterize` | "Jean Marie" |
 
-
-
 ------
 
 ## lstrip
@@ -179,8 +155,6 @@ This function (left strip) removes the white space at the beginning of the input
 | Example                       | Result            |
 | ----------------------------- | ----------------- |
 | `"   Jean   Marie   ".lstrip` | "Jean   Marie   " |
-
-
 
 ------
 
@@ -193,8 +167,6 @@ This function (right strip) removes the white space at the end of the input stri
 | ----------------------------- | ----------------- |
 | `"   Jean   Marie   ".rstrip` | "   Jean   Marie" |
 
-
-
 ------
 
 ## strip
@@ -205,8 +177,6 @@ This function removes the white space at the beginning and the end of the input 
 | Example                      | Result         |
 | ---------------------------- | -------------- |
 | `"   Jean   Marie   ".strip` | "Jean   Marie" |
-
-
 
 ------
 
@@ -221,10 +191,6 @@ Aligns the string to the left. You will need to specify the length of the string
 | `"Jean Marie".ljust(12)`      | "Jean Marie  " |
 | `"Jean Marie".ljust(12, "-")` | "Jean Marie--" |
 
-
-
-
-
 ---
 
 ## rjust
@@ -238,10 +204,6 @@ Aligns the string to the right. You will need to specify the length of the strin
 | `"Jean Marie".rjust(12)`      | "  Jean Marie" |
 | `"Jean Marie".rjust(12, "-")` | "--Jean Marie" |
 
-
-
-
-
 ------
 
 ## reverse
@@ -254,8 +216,6 @@ This function inverts a string, reordering the characters in a backward manner. 
 | `"Jean Marie".reverse`   | "eiraM naeJ"   |
 | `" jean marie ".reverse` | " eiram naej " |
 
-
-
 ------
 
 ## gsub
@@ -263,14 +223,17 @@ This function inverts a string, reordering the characters in a backward manner. 
 This function replaces all occurrence of the first input value, with the second input value, within the string. This function is case-sensitive - make sure to downcase or upcase before comparison if you are not concerned about case sensitivity.
 
 ### Example
-| Example                                  | Result       |
-| ---------------------------------------- | ------------ |
-| `"Jean Marie".gsub("J", "M")`            | "Mean Marie" |
-| `"Jean Marie".gsub("j", "M")`            | "Jean Marie" |
-| `"Jean Marie".downcase.gsub("j", "M")`   | "Mean marie" |
+| Example                                      | Result       |
+| -------------------------------------------- | ------------ |
+| `"Jean Marie".gsub("J", "M")`                | "Mean Marie" |
+| `"Jean Marie".gsub("j", "M")`                | "Jean Marie" |
+| `"Jean Marie".downcase.gsub("j", "M")`       | "Mean marie" |
 | `"Awesome".gsub(/[Ae]/, 'A'=>'E', 'e'=>'a')` | "Ewasoma"    |
+| `"Anna's Cafe".gsub("'", "\\'")`             | "Annas Cafes Cafe" #replace quotation symbol with text after breakpoint|
+| `"Jean'Marie".gsub("'", "\\'")`              | "JeanMarieMarie" #replace quotation symbol with text after breakpoint|
+| `"Anna's Cafe".gsub("'", {"'"=>"\\'"})`      | "Anna\\'s Cafe" #escaping the quotation symbol|
 
-
+---
 
 ## length
 
@@ -283,11 +246,9 @@ This function returns the number of characters within an input string, including
 | `"Jean Marie".length`   | 10     |
 | `" jean marie ".length` | 12     |
 
-
-
 ---
 
-## slice 
+## slice
 
 This function returns a partial segment of a string. Pass in 2 parameters - the first parameter is the index that decides which part of the string to start returning from (first letter being 0 and subsequently progressing incrementally, negative numbers will be taken from the last character), the second parameter decides how many characters to return. If only the first parameter is passed in, only 1 character will be returned.
 
@@ -299,11 +260,7 @@ This function returns a partial segment of a string. Pass in 2 parameters - the 
 | `"Jean Marie".slice(3,3)`  | "n M"   |
 | `"Jean Marie".slice(-5,5)` | "Marie" |
 
-
-
 ---
-
-
 
 # Text case manipulation
 
@@ -322,8 +279,6 @@ This function converts the input string into sentence case, i.e. the first chara
 | `"ticket opened. Gold SLA".capitalize` | "Ticket opened. gold sla" |
 | `"jean MARIE".capitalize`              | "Jean marie"              |
 
-
-
 ------
 
 ## titleize
@@ -336,8 +291,6 @@ This function converts the input string into title case, i.e. the first characte
 | ------------------------------------ | ------------------------- |
 | `"ticket opened. gold SLA".titleize` | "Ticket Opened. Gold Sla" |
 | `"jean MARIE".titleize`              | "Jean Marie"              |
-
-
 
 ------
 
@@ -352,8 +305,6 @@ This function converts all characters from the input string into upper-case.
 | `"ticket opened. Gold SLA".upcase` | "TICKET OPENED. GOLD SLA" |
 | `"jean MARIE".upcase`              | "JEAN MARIE"              |
 
-
-
 ------
 
 ## downcase
@@ -367,11 +318,9 @@ This function converts all characters from the input string into lower-case.
 | `"ticket opened. Gold SLA".downcase` | "ticket opened. gold sla" |
 | `"jean MARIE".downcase`              | "jean marie"              |
 
-
-
 ---
 
-# Converting to arrays and back 
+# Converting to arrays and back
 
 This section shows how you can manipulate strings into arrays in other to get certain desired elements of a string.
 
@@ -389,53 +338,7 @@ Splits up a string based on certain characters. Character is case sensitive. If 
 | `"Jean Marie".split("M")`  | ["Jean ", "arie"] |
 | `"Marie, Jean".split(",")` | ["Marie", "Jean"] |
 
-
-
-## join
-
-Joins elements in a list by a specified character to form a string. If no character is defined, by default, elements will just be joined together.
-
-### Example
-
-| Example                             | Result          |
-| ----------------------------------- | --------------- |
-| `["Jean", "Marie"].join`            | "JeanMarie"     |
-| `["Jean", "Marie"].join(", ")`      | "Jean, Marie"   |
-| `["Ms", "Jean", "Marie"].join(" ")` | "Ms Jean Marie" |
-
-
-
-## first
-
-Returns the first item in a list. Can also be used to return the first n items in a list, as a list.
-
-### Example
-
-| Example                            | Result         |
-| ---------------------------------- | -------------- |
-| `["Jean", "Marie"].first`          | "Jean"         |
-| `["Ms", "Jean", "Marie"].first`    | "Ms"           |
-| `["Ms", "Jean", "Marie"].first(2)` | ["Ms", "Jean"] |
-
-
-
-## last
-
-Returns the last item in a list. Can also be used to return the last n items in a list, as a list.
-
-### Example
-
-| Example                           | Result            |
-| --------------------------------- | ----------------- |
-| `["Jean", "Marie"].last`          | "Marie"           |
-| `["Ms", "Jean", "Marie"].last`    | "Marie"           |
-| `["Ms", "Jean", "Marie"].last(2)` | ["Jean", "Marie"] |
-
-
-
 ---
-
-
 
 # Conversion formulas
 
@@ -456,8 +359,6 @@ Converts a value of another data type into a string data type.
 | `[date].to_s(:short)` | "30 Mar 21:59"                     | Date -> String   |
 | `[date].to_s(:long)`  | "March 30, 2017 21:59"             | Date -> String   |
 
-
-
 ---
 
 ## Conversion of strings to other data types
@@ -475,8 +376,6 @@ Changes the type of a variable to a float
 | "123 Jean Marie 321".to_f | "123.0"   |
 | "123.456".to_f            | "123.456" |
 
-
-
 ---
 
 ## to_i
@@ -493,8 +392,6 @@ Changes the type of variable to an integer . Will always be rounded **down** to 
 | "123.456".to_f            | 123  |
 | "123.9".to_f              | 123  |
 
-
-
 ---
 
 ## to_country_alpha2
@@ -507,8 +404,6 @@ Convert alpha-3 country code or country name to alpha2 country code (first 2 ini
 | ---------------------------------- | ------ |
 | "GBR".to_country_alpha2            | "GB"     |
 | "United Kingdom".to_country_alpha2 | "GB"     |
-
-
 
 ---
 
@@ -523,8 +418,6 @@ Convert alpha-2 country code or country name to alpha3 country code (first 3 ini
 | "GB".to_country_alpha2             | "GBR"    |
 | "United Kingdom".to_country_alpha2 | "GBR"    |
 
-
-
 ---
 
 ## to_country_name
@@ -537,8 +430,6 @@ Convert alpha-2/3 country code or country name to ISO3166 country name.
 | --------------------- | -------------- |
 | "GBR".to_country_name | "United Kingdom" |
 | "GB".to_country_name  | "United Kingdom" |
-
-
 
 ---
 
@@ -554,8 +445,6 @@ Formats integers/numbers to a currency-style. You may add the precision as well.
 | "12345.678".to_currency               | "$12345.68"  |
 | "12345.678".to_currency(precision: 3) | "$12345.678" |
 
-
-
 ---
 
 ## to_currency_code
@@ -568,8 +457,6 @@ Convert alpha-2/3 country code or country name to ISO4217 currency code
 | ---------------------- | ------ |
 | "GBR".to_currency_code | "GBP"    |
 | "US".to_currency_code  | "USD"    |
-
-
 
 ---
 
@@ -584,8 +471,6 @@ Convert alpha-3 currency code or alpha-2/3 country code or country name to ISO42
 | "GBR".to_currency_code | "Pound"   |
 | "USD".to_currency_code | "Dollars" |
 
-
-
 ---
 
 ## to_currency_symbol
@@ -598,8 +483,6 @@ Convert alpha-3 currency code or alpha-2/3 country code or country name to ISO42
 | ---------------------- | ------ |
 | "GBR".to_currency_code | "£"      |
 | "USD".to_currency_code | "$"      |
-
-
 
 ---
 

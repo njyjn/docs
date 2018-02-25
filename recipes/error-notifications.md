@@ -1,10 +1,10 @@
 ---
-title: Errors & notifications
+title: Errors notifications emails
 date: 2017-05-09 15:00:00 Z
 ---
 
-# Errors
-Jobs may encounter errors when trying to fetch trigger events, or when trying to carry out an action. There are 2 main types of errors a job may encounter - this article explains both errors and how they can be resolved.
+# Error notification emails
+Jobs may encounter errors when trying to fetch trigger events, or when trying to carry out an action. This article briefly explains trigger errors and actions errors, and covers Workato's error notification policy and how it handles recipes that run into consecutive errors.
 
 ## Trigger errors
 Trigger errors occur when the recipe tries to retrieve trigger events by polling the trigger app. The recipe might fail to retrieve trigger events in the following cases:
@@ -19,7 +19,7 @@ When a trigger error is met, the recipe will surface a trigger warning, but cont
 
 In the following case, a trigger warning was raised because the schema recorded in the recipe did not match the schema in the app. The warning suggests refreshing the schema as a way to resolve the trigger error, and further details of the error can be seen when expanded.
 
-![Trigger warning](/assets/images/recipes/errors/trigger-warning.png)
+![Trigger warning](/assets/images/recipes/errors/trigger-warning.gif)
 *Trigger warning surfaced on the recipe due to outdated schema that needs refreshing*
 
 ### Recipes stopped by Workato

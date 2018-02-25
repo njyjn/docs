@@ -4,7 +4,7 @@ date: 2017-02-22 12:00:00 Z
 ---
 
 # What is Workato?
-Workato helps you automate business workflows across cloud apps, on-premise apps and employees. e.g. automate quote to cash business process which may involve Salesforce, Netsuite, Bill.com, Apttus, etc. Workato combines an enterprise-grade workflow automation platform with the ease of use expected from consumer apps, enabling biz users and IT to quickly build workflow automations.
+Workato helps you automate business workflows across cloud apps, on-premise apps and employees, e.g. automate quote to cash business processes which may involve multiple apps such as Salesforce, Netsuite, Bill.com and Apttus. Workato combines an enterprise-grade workflow automation platform with the ease of use expected from consumer apps, enabling biz users and IT to quickly build workflow automations.
 
 # The integration problem
 The average enterprise uses over 1000 different apps. These frequently include both cloud-based and on-premise applications. In addition, personal and business productivity applications such as chat, social media, calendering, and the like are a key part of daily work and data from these is often unintegrated with other business data.

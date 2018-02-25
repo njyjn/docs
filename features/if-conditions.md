@@ -6,7 +6,7 @@ date: 2017-02-23 15:15:00 Z
 # IF conditions
 IF conditions can be found in multiple features in Workato:
 
-- Trigger conditions
+- [Trigger conditions](/recipes/triggers.md#trigger-conditions)
 
 You can set IF conditions for your triggers to define what subset of trigger events should be processed by the recipe, e.g. only new Salesforce accounts with the type "Customer", or only Salesforce leads with the rating "Hot".
 
@@ -407,7 +407,7 @@ This condition is the opposite of the [is true condition](#is-true). It checks t
 ![Example is not true recipe](/assets/images/features/trigger-conditions/example-is-not-true-recipe.png)
 *The trigger condition tells the recipe to only process new Salesforce cases if they are not closed*
 
-It can also be used to check that the formula provided in the trigger data input field evaluates to false. For example, you can convert string type datapills via string formulas into conditions that evaluates to a boolean, which can be found ![here](http://docs.workato.com/formulas/string-formulas.html), with an example as follows.
+It can also be used to check that the formula provided in the trigger data input field evaluates to false. For example, you can convert string type datapills via string formulas into conditions that evaluates to a boolean, which can be found [here](/formulas/string-formulas.md), with an example as follows.
 
 ### Examples
 | Trigger data                               | Condition/value | Picked up by recipe?                                               |

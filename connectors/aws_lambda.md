@@ -1,33 +1,34 @@
 ---
-title: AWS Lambda
+title: Workato connectors - AWS Lambda
 date: 2017-06-09 04:45:00 Z
 ---
 
 # AWS Lambda
+[AWS Lambda](https://aws.amazon.com/lambda/) is a scalable compute service that allows you to execute code without provisioning or managing servers. It is a versatile service that enables users to build a variety of real-time serverless data processing systems quickly and easily.
 
-## Configure output schema
+## Working with the AWS Lambda connector
 
-Since the output data from a Lambda function is not static and varies with the function, a sample response is needed to generate an action's output schema, also known as [output datatree](/workato-concepts.md#data-tree-and-pills). This datatree allows you to map the output from the function into another recipe step.
+## Output schema definition
+When working with Lambda functions as triggers or actions, you will need to define the output schema for the function being called, as each function's response is variable. This sample output schema will be used to build the [output datatree](/workato-concepts.md#data-tree-and-pills). This datatree allows you to use the data returned from the Lambda function in subsequent recipe actions.
 
-All you need to do is provide a sample response to the `Response body` input field. Now the format of your response will determine what the sample output should look like. We will explore how to format a sample response for 2 cases: JSON response body and single primitive data.
-
-## Response body input field
+To define the output schema, provide a sample response to the `Response body` input field. This should describe the data structure and schema of the output. There are 2 ways to configure this input field:
+- Use a sample JSON
+- Manually define schema using the schema designer widget
 
 ![Schema Designer](/assets/images/aws_lambda/response_body_input_field.png)
 *Response body input field*
 
-There are 2 ways to configure this input field: Using a sample JSON or creating a schema definition. This article focuses on using sample JSON.
-
-Clicking on `generate from JSON sample` will open a pop up which looks like this:
+This article focuses on defining the output schema via sample JSON. Clicking on `generate from JSON sample` brings up the following schema designer widget.
 
 ![Sample JSON pop up](/assets/images/aws_lambda/sample_json_pop_up.png)
-*Sample JSON pop up*
+*Schema designer widget*
 
-Provide a valid JSON. More details about formatting a valid JSON body for the AWS lambda connector in the next section.
+There are two typical formats for a JSON:
+- JSON response body
+- Single primitive data
 
 ## JSON response
-
-Workato requires all data be presented as key & value pairs. This is done so that we can map values using it's respective key. JSON data format is a good example. For the AWS lambda connector, we require all response JSON to be wrapped in a parent `"response"` object. Hence using a given response like this:
+Workato requires all data be presented as key & value pairs. This is done so that we can map values using its respective key. JSON data format is a good example. For the AWS Lambda connector, we require all response JSON to be wrapped in a parent `"response"` object. Hence using a given response like this:
 
 ```json
 {
@@ -37,7 +38,7 @@ Workato requires all data be presented as key & value pairs. This is done so tha
 }
 ```
 
-Wrap it in a parent `"response" object:
+Wrap it in a parent `"response"` object:
 
 ```json
 {
@@ -55,8 +56,7 @@ Insert the output JSON and click `Generate`. This generates the following output
 *JSON body output datatree*
 
 ## Primitive data response
-
-If the lambda function returns non-JSON data structure, like a single string, integer or a simple boolean value, it will likewise need to be wrapped in a parent `"response"` object. Let's look at a simple function that returns an integer value (ID for example). A sample response will be:
+If the Lambda function returns non-JSON data structure, like a single string, integer or a simple boolean value, it will likewise need to be wrapped in a parent `"response"` object. Let's look at a simple function that returns an integer value (ID for example). A sample response will be:
 
 ```json
 4990

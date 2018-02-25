@@ -1,17 +1,19 @@
 body {
   color: #525252;
   font-family: Lato, Helvetica, Arial, sans-serif;
-  padding-top: 140px;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 120px;
 }
 
 /* Layout */
-.book {
-  height: auto;
+.book, .book-body .body-inner {
+  height: calc(100vh - 120px);
 }
 
 .book-summary {
   position: fixed;
-  top: 140px;
+  top: 120px;
 }
 
 .book-body {
@@ -26,6 +28,7 @@ body {
 
 .book-body .body-inner {
   position: static;
+  overflow: auto;
 }
 
 /* Markdown document */
@@ -144,6 +147,7 @@ body {
 }
 
 .w-header__row_toolbar {
+  height: 50px;
   padding-right: 0;
 }
 

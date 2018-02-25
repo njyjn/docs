@@ -114,3 +114,5 @@ The columns defined in the **Box new CSV file** trigger shows up as usable datap
 
 ![Use defined CSV variables](/assets/images/features/files-and-attachments/use-defined-csv-variables.gif)
 *Using the variables created from the columns definition. [Example recipe](https://www.workato.com/recipes/485023)*
+
+You can find more details and examples about parsing CSV files via Workato in the [CSV files article](/features/handling-csv-files.md).
