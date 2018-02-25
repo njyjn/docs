@@ -267,6 +267,8 @@ end
 
 ##### Responses with arrays of objects
 
+Here we have an array of objects as our response. This is more commonly seen.
+
 ```json
 {
   "children": [
@@ -281,7 +283,8 @@ end
   ]
 }
 ```
-The only thing that is different would be how we define the output. Let's use a predefined object in `object_definitions`, which is similar to the nomenclature used in the response.
+
+Let's use a predefined object in `object_definitions`, which is similar to the nomenclature used in the response.
 
 ```ruby
 object_definitions: {
