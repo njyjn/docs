@@ -118,14 +118,18 @@ end,
 
 output_fields: lambda do
   [
-    { name: "user", type: :object, properties: [
-      { name: "email" }
-    ] }
+    {
+      name: "user",
+      type: :object,
+      properties: [
+        { name: "email" }
+      ]
+    }
   ]
 end
 ```
 
-or 
+or
 
 ```ruby
 execute: lambda do |connection, input|
@@ -136,9 +140,13 @@ end,
 
 output_fields: lambda do
   [
-    { name: "user", type: :object, properties: [
-      { name: "email" }
-    ] }
+    {
+      name: "user",
+      type: :object,
+      properties: [
+        { name: "email" }
+      ]
+    }
   ]
 end
 ```
