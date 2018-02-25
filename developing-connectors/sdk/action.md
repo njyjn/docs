@@ -174,3 +174,142 @@ output_fields: lambda do
   ]
 end
 ```
+
+#### 3. Array output
+
+##### Top-level array responses
+
+Some endpoints return a simple top-level array response
+
+```json
+[
+  "elijah@a.co",
+  "marion@a.co",
+  "shayna@a.co"
+]
+```
+
+We would simply need to nest the object like in the previous example
+
+```ruby
+execute: lambda do |connection, input|
+  response = get("https://api.example.com/v1/emails")
+
+    { emails: response }
+end,
+
+output_fields: lambda do
+  [
+    {
+      name: "emails",
+      type: :array,
+      of: :string
+    }
+  ]
+end
+```
+
+##### Nested array responses
+
+Now let's assume that the output from an example endpoint is as so
+
+```json
+{
+  "child_emails": [
+    "elijah@a.co",
+    "marion@a.co",
+    "shayna@a.co"
+  ]
+}
+```
+
+We can directly map the response in `output_fields` without having to nest it.
+
+```ruby
+execute: lambda do |connection, input|
+  get("https://api.example.com/v1/child_emails")
+end,
+
+output_fields: lambda do
+  [
+    {
+      name: "child_emails",
+      type: :array,
+      of: :string
+    }
+  ]
+end
+```
+
+Note that we define an array of name `child_emails` in our `output_fields`. This matches the response array's name. If you intend to use different names, you must use nest the response output in the `execute` block.
+
+For example, we want the output array to have name `emails` instead of `child_emails`. Let's use Ruby method `dig` to surface the desired array to the top-level.
+
+```ruby
+execute: lambda do |connection, input|
+  response = get("https://api.example.com/v1/child_emails").
+               dig["child_emails"]
+               # ["elijah@a.co","marion@a.co","shayna@a.co"]
+
+  { emails: response }
+end,
+
+output_fields: lambda do
+  [
+    {
+      name: "emails",
+      type: :array,
+      of: :string
+    }
+  ]
+end
+```
+
+##### Responses with arrays of objects
+
+```json
+{
+  "children": [
+    {
+      "child_name": "Elijah",
+      "child_age": 3
+    },
+    {
+      "child_name": "Marion",
+      "child_age": 1
+    }
+  ]
+}
+```
+The only thing that is different would be how we define the output. Let's use a predefined object in `object_definitions`, which is similar to the nomenclature used in the response.
+
+```ruby
+object_definitions: {
+  children: {
+    fields: lambda do
+      [
+        {
+          name: "children",
+          type: :array,
+          of: :object,
+          properties: [
+            { name: "child_name" },
+            { name: "child_age", type: :integer }
+          ]
+        }
+      ]
+  }
+}
+```
+
+With this, we can simply perform the mapping in the following way
+
+```ruby
+execute: lambda do |connection, input|
+  get("https://api.example.com/v1/children")
+end,
+
+output_fields: lambda do
+  object_definitions["children"]
+end
+```
