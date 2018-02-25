@@ -85,7 +85,7 @@ Note:
 ### Custom token authentication
 The `token_url` is called using a `POST` request with the provided `client_id` and `client_secret` appended into the header.
 
-However, some APIs require the authorization token to be obtained by using a `POST` request with basic authentication. Use the `acquire` hook instead.
+However, some APIs require the authorization token to be obtained by using a `POST` request. Use the `acquire` hook instead. Here is an example using basic authentication.
 
 ```ruby
 connection: {
@@ -132,7 +132,7 @@ connection: {
 
 The methods `.user` and `.password` are the equivalent of appending `Authorization: BASIC ` and `<user>:<password>` in BASE-64 String encoding in the `POST` request header. Note that the request must be sent with `request_format_www_form_urlencoded`.
 
-Upon receiving a the request, the API returns a JSON response. These can be accessed using the `response[key...]` variable defined. For example, if the call returns
+Upon receiving the request, the API returns a JSON response. These can be accessed using the `response["key"]` variable defined. For example, if the call returns
 
 ```json
 {
@@ -141,7 +141,7 @@ Upon receiving a the request, the API returns a JSON response. These can be acce
   "settings": "no"
 }
 ```
-we can retrieve the `access_token` from `response[access_token]`. These parameters are also appended into the original `connection` object.
+we can retrieve the `access_token` from `response["access_token"]`.
 
 When using custom OAuth2 type connection, the `acquire` hook must return an array with the following values in sequence:
 
