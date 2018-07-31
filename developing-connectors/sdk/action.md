@@ -76,7 +76,7 @@ See [Methods](/developing-connectors/sdk/methods.md) section for list of methods
 
 ### Output
 
-Did you notice that some requests were encapsulated in `{ }`, and some were not? This will depend on what your endpoint returns and how you would like to map the response to your `output_definition`. Typically, most REST endpoints would return a JSON response, whether the request was successful or not.
+Did you notice that some requests were encapsulated in `{ }`, and some were not? This will depend on what your endpoint returns and how you would like to map the response to your `output_fields`. Typically, most REST endpoints would return a JSON response, whether the request was successful or not.
 
 Here are two examples. In all cases, the SDK expects the last line of the execute block to be a Hash object.
 
@@ -88,7 +88,7 @@ Assume that the output from an example endpoint is as so
 }
 ```
 
-#### 1. Simple object output
+#### Simple object output
 
 Here, we can leave the `GET` method alone, since it maps directly into our `output_fields` definition.
 
@@ -104,8 +104,7 @@ output_fields: lambda do
 end
 ```
 
-
-#### 2. Nested object output
+#### Nested object output
 
 Here we need to take the extra step of mapping the response returned as a nested Hash object.
 
@@ -175,11 +174,11 @@ output_fields: lambda do
 end
 ```
 
-#### 3. Array output
+#### Array output
 
 ##### Top-level array responses
 
-Some endpoints return a simple top-level array response
+Some endpoints return a simple top-level array response:
 
 ```json
 [
